@@ -101,10 +101,10 @@ void MyTcpSocket::readData()
 ```
 
 ## Avantages
-1.Réactivité en Temps Réel : La communication via sockets TCP permet une transmission instantanée des résultats de détection, facilitant le suivi en temps réel des personnes.
-2.Flexibilité : Le format JSON est facile à lire et à manipuler, ce qui simplifie l'intégration avec différents systèmes et plateformes.
-3.Séparation des Concernes : Le client et le serveur sont indépendants, ce qui facilite la maintenance et les mises à jour du système.
-4.Analyse Centralisée : Les données peuvent être agrégées et analysées sur le serveur, permettant des rapports détaillés et une gestion centralisée des informations de détection.
+1. **Réactivité en Temps Réel** : La communication via sockets TCP permet une transmission instantanée des résultats de détection, facilitant le suivi en temps réel des personnes.
+2. **Flexibilité** : Le format JSON est facile à lire et à manipuler, ce qui simplifie l'intégration avec différents systèmes et plateformes.
+3. **Séparation des Concernes** : Le client et le serveur sont indépendants, ce qui facilite la maintenance et les mises à jour du système.
+4. **Analyse Centralisée** : Les données peuvent être agrégées et analysées sur le serveur, permettant des rapports détaillés et une gestion centralisée des informations de détection.
 
 
 
