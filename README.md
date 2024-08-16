@@ -107,6 +107,22 @@ void MyTcpSocket::readData()
 4. **Analyse Centralisée** : Les données peuvent être agrégées et analysées sur le serveur, permettant des rapports détaillés et une gestion centralisée des informations de détection.
 
 
+## Perspectives
 
+### Intégration avec une Carte Raspberry Pi
 
+L'application Qt peut être déployée sur une carte Raspberry Pi pour réaliser des détections en temps réel et envoyer les résultats via TCP à un serveur. Voici comment cela peut fonctionner :
 
+1. **Déploiement sur Raspberry Pi** : L'application Qt et le serveur TCP (implémenté en C++) peuvent être déployés sur une carte Raspberry Pi. La Raspberry Pi peut exécuter le serveur TCP pour recevoir les données de détection.
+   
+2. **Communication avec le Modèle** : Le modèle de détection (souvent un modèle d'apprentissage automatique ou de vision par ordinateur) peut être exécuté sur un autre système (comme un PC ou un serveur distant). La Raspberry Pi enverra les résultats de détection au serveur via TCP.
+
+3. **Processus de Communication** :
+   - **Détection** : Le modèle de détection sur la Raspberry Pi analyse les images et détecte les personnes.
+   - **Envoi des Données** : Les résultats de la détection sont envoyés au serveur central via le socket TCP configuré.
+   - **Traitement Centralisé** : Le serveur central reçoit et traite les données, les agrège et les utilise pour des analyses plus poussées.
+
+4. **Avantages** :
+   - **Décentralisation** : La Raspberry Pi peut gérer la détection localement tout en envoyant les résultats au serveur central pour une analyse approfondie.
+   - **Scalabilité** : Le système peut être étendu avec plusieurs Raspberry Pi pour gérer des détections dans différentes zones géographiques.
+   - **Efficacité** : Le traitement local sur Raspberry Pi réduit la latence en envoyant uniquement les données pertinentes au serveur central.
