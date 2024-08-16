@@ -1,4 +1,4 @@
-# ZReformulation et Nettoyage du Projet "Système de Détection et de Suivi de Personnes"
+# Reformulation et Nettoyage du Projet "Système de Détection et de Suivi de Personnes"
 
 
 ## Objectif
