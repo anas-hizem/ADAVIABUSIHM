@@ -1,66 +1,112 @@
-# Reformulation et Nettoyage du Projet "Système de Détection et de Suivi de Personnes"
+# Envoi des Résultats de Détection des personnes via Sockets TCP
 
 
 ## Objectif
 
-Le but du projet est de détecter les personnes dans une vidéo, de suivre leurs mouvements, et de compter combien de personnes entrent et sortent d'une zone délimitée par des lignes d'entrée et de sortie. Les données de détection sont également envoyées à un serveur via des sockets.
+Cette mise à jour ajoute la fonctionnalité d'envoi des résultats de détection de personnes à un serveur via des sockets TCP. L'envoi des données permet de transmettre les informations de détection en temps réel pour un traitement ultérieur ou une analyse centralisée.
 
-## Composants Principaux
-
-- **PersonDetection.py** : Script principal pour la détection de personnes dans une vidéo. Il utilise un modèle YOLO pour la détection, et SORT pour le suivi des objets.
-- **utils_prin.py** : Contient des fonctions utilitaires pour l'initialisation du modèle et du tracker, la gestion des détections, l'envoi des données au serveur, et le dessin des lignes de référence sur l'image.
-- **sort.py** : Contient l'implémentation de l'algorithme SORT (Simple Online and Realtime Tracking) pour le suivi des objets détectés.
 
 ## Fonctionnement
 
-1. **Initialisation**:
-   - Le script `PersonDetection.py` ouvre une vidéo (`test4.mp4`) et redimensionne les images à une taille souhaitée.
-   - Il initialise le modèle YOLO pour la détection et le tracker SORT pour le suivi.
+### Côté Client (Python)
 
-2. **Détection**:
-   - Pour chaque image de la vidéo, les personnes sont détectées par le modèle YOLO.
-   - Les résultats de la détection sont utilisés pour mettre à jour le tracker SORT.
+#### Envoi des Données :
+La fonction send_data_person(detected_person) est utilisée pour envoyer les résultats de détection à un serveur.
 
-3. **Suivi**:
-   - Le tracker SORT suit les personnes détectées d'une image à l'autre en utilisant les coordonnées des bounding boxes.
+1. **Configuration du Socket :** Un socket TCP est créé et connecté au serveur à l'adresse localhost sur le port 65432.
+2. **Format des Données :** Les données de détection sont converties en format JSON et envoyées au serveur après encodage.
+3. **Gestion des Exceptions :** Les erreurs potentielles lors de l'envoi des données sont capturées et affichées.
+4. **Fermeture du Socket :** Le socket est fermé après l'envoi des données pour libérer les ressources.
 
-4. **Analyse des Trajectoires**:
-   - Deux lignes de référence (entrée et sortie) sont définies sur l'image.
-   - Lorsqu'une personne traverse ces lignes, les compteurs d'entrée et de sortie sont mis à jour.
-   - Les résultats sont envoyés à un serveur via un socket, comprenant le nombre de personnes entrées et sorties ainsi que le nombre total de personnes actuellement dans la zone.
+```python
 
-5. **Affichage**:
-   - Les résultats sont affichés en temps réel sur la fenêtre d'affichage avec les lignes de référence et les compteurs.
+def send_data_person(detected_person):
+    try:
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.connect(('localhost', 65432))
+        message = json.dumps({"person": detected_person})
+        sock.sendall(message.encode('utf-8'))
+    except Exception as e:
+        print(f"Error sending data: {e}")
+    finally:
+        sock.close()
+```
 
-## Détails Techniques
+#### Traitement des Résultats du Tracker :
 
-- **Modèle YOLO**:
-  - Utilisé pour détecter les personnes et d'autres objets (comme des panneaux).
-  - Les classes détectées incluent des panneaux et des personnes.
+- La fonction process_tracker_results traite les résultats du tracker pour mettre à jour les compteurs d'entrée et de sortie.
+- Les résultats de détection sont envoyés via send_data_person.
+```python
 
-- **Tracker SORT**:
-  - Un algorithme de suivi simple et en temps réel qui associe les détections à des objets suivis en utilisant la matrice d'IoU (Intersection over Union).
+def process_tracker_results(img, results_tracker, entry_line, exit_line, entry_crossed, exit_crossed, total_count_up, total_count_down):
+    detected_person = {"current": 0, "entry": 0, "exit": 0}
+    for result in results_tracker:
+        x1, y1, x2, y2, id = map(int, result)
+        cx, cy = x1 + (x2 - x1) // 2, y1 + (y2 - y1) // 2
+        # Check for crossing lines
+        if id not in entry_crossed and entry_line[0] < cx < entry_line[2] and entry_line[1] - 5 < cy < entry_line[1] + 5:
+            entry_crossed.add(id)
+            if id not in exit_crossed:
+                total_count_down.append(id)
+        if id not in exit_crossed and exit_line[0] < cx < exit_line[2] and exit_line[1] - 5 < cy < exit_line[1] + 5:
+            exit_crossed.add(id)
+            if id not in total_count_up:
+                total_count_up.append(id)
+    detected_person["current"] = len(total_count_up) - len(total_count_down)
+    detected_person["entry"] = len(total_count_up)
+    detected_person["exit"] = len(total_count_down)
+    send_data_person(detected_person)
 
-- **Sockets**:
-  - Les données de détection sont envoyées à un serveur local via des sockets en utilisant le protocole TCP.
+```
+### Côté Serveur (Qt)
+#### Configuration du Serveur :
+Le serveur TCP est implémenté dans MyTcpSocket en Qt.
+1.Démarrage du Serveur : Le serveur écoute les connexions entrantes sur le port 65432.
+2.Gestion des Connexions : Lorsqu'une connexion est établie, un socket est créé pour recevoir les données.
+3.Lecture des Données : Les données reçues sont lues, décodées du format JSON, et les informations sont extraites et signalées via un signal Qt.
 
-- **Fonctions Utilitaires**:
-  - `initialize_model_and_tracker()`: Initialise le modèle YOLO et le tracker SORT.
-  - `get_detections()`: Obtient les détections du modèle.
-  - `update_tracker()`: Met à jour le tracker avec les nouvelles détections.
-  - `draw_lines()`: Dessine les lignes de référence sur l'image.
-  - `process_tracker_results()`: Traite les résultats du tracker, compte les entrées et les sorties, et envoie les données au serveur.
+```cpp
 
-## Code Expliqué
+void MyTcpSocket::startServer()
+{
+    if (!server->listen(QHostAddress::Any, 65432)) {
+        qDebug() << "Server error: " << server->errorString();
+        return;
+    }
+    qDebug() << "Server started...";
+}
 
-- **main()**: Le point d'entrée du script. Il lit les images, effectue la détection et le suivi, met à jour les compteurs, et affiche les résultats.
-  
-- **utils_prin.py**:
-  - Contient des fonctions pour gérer la détection, le suivi, et l'envoi des données.
-  - Les données envoyées comprennent des informations sur les personnes détectées et leur statut (entrée/sortie).
+void MyTcpSocket::newConnection()
+{
+    socket = server->nextPendingConnection();
+    connect(socket, &QTcpSocket::readyRead, this, &MyTcpSocket::readData);
+    connect(socket, &QTcpSocket::disconnected, socket, &QTcpSocket::deleteLater);
+}
 
-- **sort.py**:
-  - Implémente l'algorithme de suivi SORT, qui utilise un filtre de Kalman pour prédire et corriger les positions des objets suivis.
+void MyTcpSocket::readData()
+{
+    QByteArray data = socket->readAll();
+    QJsonDocument jsonDoc = QJsonDocument::fromJson(data);
+    QJsonObject jsonObj = jsonDoc.object();
 
-Ce projet est typiquement utilisé dans des systèmes de comptage de personnes, des applications de surveillance et des systèmes de gestion de flux de personnes dans des environnements comme les magasins, les événements publics, et les bâtiments commerciaux.
+    if (jsonObj.contains("person")) {
+        QJsonObject personObj = jsonObj["person"].toObject();
+        int current = personObj["current"].toInt();
+        int entry = personObj["entry"].toInt();
+        int exit = personObj["exit"].toInt();
+        emit countReceived(current, entry, exit);
+    }
+}
+
+```
+
+## Avantages
+1.Réactivité en Temps Réel : La communication via sockets TCP permet une transmission instantanée des résultats de détection, facilitant le suivi en temps réel des personnes.
+2.Flexibilité : Le format JSON est facile à lire et à manipuler, ce qui simplifie l'intégration avec différents systèmes et plateformes.
+3.Séparation des Concernes : Le client et le serveur sont indépendants, ce qui facilite la maintenance et les mises à jour du système.
+4.Analyse Centralisée : Les données peuvent être agrégées et analysées sur le serveur, permettant des rapports détaillés et une gestion centralisée des informations de détection.
+
+
+
+
 
