@@ -16,7 +16,7 @@ Item {
         rows: 1
         columns: 2
         rowSpacing: 20
-        columnSpacing: 10
+        columnSpacing: 0
 
         ColumnLayout {
             Layout.row: 0
@@ -62,7 +62,8 @@ Item {
                         }
                         Image {
                             id: placeholderImageAvant
-                            source: "qrc:/assets/camera/logoactiawhite.png"
+                            anchors.fill: parent
+                            source: "qrc:/assets/actia logo/ACTIA-BACKGROUND-PC (2).jpg"
                             width: parent.width
                             anchors.centerIn: parent
                             visible: cameraStreamingAvant.cameraStatus !== Camera.ActiveStatus
@@ -98,7 +99,8 @@ Item {
                         }
                         Image {
                             id: placeholderImageArriere
-                            source: "qrc:/assets/camera/logoactia.png"
+                            anchors.fill: parent
+                            source: "qrc:/assets/actia logo/ACTIA-BACKGROUND-PC.jpg"
                             width: parent.width
                             anchors.centerIn: parent
                             visible: cameraStreamingArriere.cameraStatus !== Camera.ActiveStatus
@@ -134,7 +136,8 @@ Item {
                         }
                         Image {
                             id: placeholderImageRetroG
-                            source: "qrc:/assets/camera/logoactiawhite.png"
+                            anchors.fill: parent
+                            source: "qrc:/assets/actia logo/ACTIA-BACKGROUND-PC.jpg"
                             width: parent.width
                             anchors.centerIn: parent
                             visible: cameraStreamingRetroG.cameraStatus !== Camera.ActiveStatus
@@ -170,7 +173,8 @@ Item {
                         }
                         Image {
                             id: placeholderImageRetroD
-                            source: "qrc:/assets/camera/logoactiagray.png"
+                            anchors.fill: parent
+                            source: "qrc:/assets/actia logo/ACTIA-BACKGROUND-PC (2).jpg"
                             width: parent.width
                             anchors.centerIn: parent
                             visible: cameraStreamingRetroD.cameraStatus !== Camera.ActiveStatus
@@ -178,10 +182,7 @@ Item {
                     }
                 }
             }
-
-
         }
-
         ColumnLayout {
             spacing: 10
             Layout.row: 0
@@ -202,14 +203,14 @@ Item {
             }
             Item {
                 id: navetteContainer
-                Layout.preferredWidth: 400
+                Layout.preferredWidth: 500
                 Layout.preferredHeight: 600
 
 
                 Image {
                     id: navetteImage
                     anchors.centerIn: parent
-                    source: "qrc:/assets/camera/navette.png"
+                    source: "qrc:/assets/camera/bus.png"
                     fillMode: Image.PreserveAspectFit
                     width: 500
                     height: 500
@@ -220,9 +221,9 @@ Item {
                     width: 1
                     height: 1
                     anchors.top: navetteImage.top
-                    anchors.topMargin: 70
+                    anchors.topMargin: 250
                     anchors.left: navetteContainer.left
-                    anchors.leftMargin: 100
+                    anchors.leftMargin: 10
                 }
 
                 Item {
@@ -259,8 +260,8 @@ Item {
                     id: textAvantArea
                     width: 100
                     height: 100
-                    anchors.top: navetteContainer.top
-                    anchors.topMargin: 40
+                    anchors.bottom: navetteContainer.bottom
+                    anchors.bottomMargin: 20
                     anchors.left: navetteContainer.left
                     anchors.leftMargin: 10
                     cursorShape: Qt.PointingHandCursor
@@ -335,9 +336,9 @@ Item {
                 MouseArea {
                     id: textRetroDArea
                     width: 100
-                    height: 100
-                    anchors.bottom: navetteContainer.bottom
-                    anchors.bottomMargin: 20
+                    height: 100                    
+                    anchors.top: navetteContainer.top
+                    anchors.topMargin: 40
                     anchors.left: navetteContainer.left
                     anchors.leftMargin: 10
                     cursorShape: Qt.PointingHandCursor

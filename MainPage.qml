@@ -92,6 +92,9 @@ Item {
             height: bottomBar.height
             anchors.left: clima.right
             anchors.leftMargin: 50
+
+            // Bind the isActive property to determine if the fan should rotate
+            isActive: imageSource === "qrc:/assets/image/defrost.svg" || imageSource === "qrc:/assets/image/heater.svg"
         }
 
         LeftSeatControl {

@@ -18,7 +18,7 @@ Rectangle {
             text: "Ultrasonic Sensor Color Guide"
             font.bold: true
             font.pointSize: 15
-            font.italic: true
+            font.family: 'lato'
             color: "white"
             anchors.horizontalCenter: parent.horizontalCenter
         }
@@ -42,6 +42,7 @@ Rectangle {
                     text: "Distance greater than 2 meters"
                     font.pointSize: 14
                     color: "white"
+                    font.family: 'lato'
                     anchors.verticalCenter: parent.verticalCenter
                 }
             }
@@ -61,6 +62,7 @@ Rectangle {
                     text: "Distance between 1 and 2 meters"
                     font.pointSize: 14
                     color: "white"
+                    font.family: 'lato'
                     anchors.verticalCenter: parent.verticalCenter
                 }
             }
@@ -80,6 +82,7 @@ Rectangle {
                     text: "Distance less than 1 meter"
                     font.pointSize: 14
                     color: "white"
+                    font.family: 'lato'
                     anchors.verticalCenter: parent.verticalCenter
                 }
             }

@@ -7,6 +7,7 @@ Item {
     height: bottomBar.height
     anchors.left: clima.left
     anchors.leftMargin: 200
+    property bool isActive: false // New property to control animation
 
     Image {
         id: fanimg
@@ -25,8 +26,16 @@ Item {
             easing.type: Easing.Linear // Transition linéaire
         }
 
-        // Démarrer l'animation lorsque l'image est chargée
-        Component.onCompleted: rotationAnimation.start()
+        // // Démarrer l'animation lorsque l'image est chargée
+        // Component.onCompleted: rotationAnimation.start()
+
+        // Control the animation based on isActive
+        Binding {
+            target: rotationAnimation
+            property: "running"
+            value: fan.isActive
+        }
+
         MouseArea {
             id: mouseArea
             anchors.fill: parent
@@ -35,7 +44,7 @@ Item {
                 if (rotationSpeed > 500) {
                     rotationSpeed -= 500 // Augmenter la vitesse (réduire la durée)
                 } else {
-                    rotationSpeed = 2000 // Réinitialiser à la vitesse initiale si trop rapide
+                    rotationSpeed = 3000 // Réinitialiser à la vitesse initiale si trop rapide
                 }
                 rotationAnimation.duration = rotationSpeed // Mettre à jour la durée de l'animation
                 rotationAnimation.restart() // Redémarrer l'animation avec la nouvelle durée

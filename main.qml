@@ -10,6 +10,7 @@ ApplicationWindow {
     visible: true
     title: qsTr("ADAVIA IHM")
     color: "#262626"
+    visibility: Window.FullScreen
 
     Loader {
         id: splashScreenLoader

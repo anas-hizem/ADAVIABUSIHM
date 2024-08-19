@@ -56,13 +56,6 @@ Rectangle {
         anchors.horizontalCenter: weatherArea.horizontalCenter
         anchors.verticalCenter: weatherArea.verticalCenter
 
-        // Image {
-        //     id: backgroundImage
-        //     anchors.fill: parent
-        //     source: "qrc:/assets/background/weatherBackground.jpg"
-        //     fillMode: Image.PreserveAspectCrop
-        //     opacity: 0.7
-        // }
         Image {
             id: img
             anchors.fill: parent

@@ -45,8 +45,6 @@ Item {
             Layout.columnSpan: 1
             Layout.rowSpan: 1
 
-            DateTimeTile {}
-
             UltrasonicData {}
 
             HelpPanel {}

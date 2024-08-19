@@ -52,10 +52,8 @@
         <file>assets/weather/weather-sunny-very-few-clouds.png</file>
         <file>assets/weather/weather-sunny.png</file>
         <file>assets/weather/weather-thundershower.png</file>
-        <file>assets/battery/BatteryIcon-2.svg</file>
         <file>assets/battery/BatteryIcon.svg</file>
         <file>assets/battery/BatteryIcon_normal.svg</file>
-        <file>assets/battery/BatteryIcon_sports.svg</file>
         <file>assets/battery/Eco Leaf Icon 2.svg</file>
         <file>assets/battery/Eco Leaf Icon.svg</file>
         <file>assets/battery/Erroricon.svg</file>
@@ -234,5 +232,48 @@
         <file>assets/icons/homeScreen/fuel-filling-svgrepo-com.svg</file>
         <file>assets/icons/homeScreen/high-beam.png</file>
         <file>assets/icons/homeScreen/winshield-wiper-svgrepo-com.svg</file>
+        <file>assets/3Dmodel/ecoline.dae</file>
+        <file>assets/3Dmodel/Ecoline.qml</file>
+        <file>assets/3Dmodel/meshes/ac.mesh</file>
+        <file>assets/3Dmodel/meshes/apion.mesh</file>
+        <file>assets/3Dmodel/meshes/ban.mesh</file>
+        <file>assets/3Dmodel/meshes/bodi.mesh</file>
+        <file>assets/3Dmodel/meshes/bokong_hitam.mesh</file>
+        <file>assets/3Dmodel/meshes/daleman.mesh</file>
+        <file>assets/3Dmodel/meshes/dasbor.mesh</file>
+        <file>assets/3Dmodel/meshes/dek.mesh</file>
+        <file>assets/3Dmodel/meshes/gorden.mesh</file>
+        <file>assets/3Dmodel/meshes/hitam.mesh</file>
+        <file>assets/3Dmodel/meshes/kaca.mesh</file>
+        <file>assets/3Dmodel/meshes/knalpot.mesh</file>
+        <file>assets/3Dmodel/meshes/krum.mesh</file>
+        <file>assets/3Dmodel/meshes/krum_hitam.mesh</file>
+        <file>assets/3Dmodel/meshes/kumis.mesh</file>
+        <file>assets/3Dmodel/meshes/kumis2.mesh</file>
+        <file>assets/3Dmodel/meshes/kursi.mesh</file>
+        <file>assets/3Dmodel/meshes/kursi_kernet.mesh</file>
+        <file>assets/3Dmodel/meshes/kursi_supir.mesh</file>
+        <file>assets/3Dmodel/meshes/lampu_blkng.mesh</file>
+        <file>assets/3Dmodel/meshes/lampu_depan.mesh</file>
+        <file>assets/3Dmodel/meshes/lampu_sein.mesh</file>
+        <file>assets/3Dmodel/meshes/lantai.mesh</file>
+        <file>assets/3Dmodel/meshes/lis.mesh</file>
+        <file>assets/3Dmodel/meshes/pelek.mesh</file>
+        <file>assets/3Dmodel/meshes/plat.mesh</file>
+        <file>assets/3Dmodel/meshes/sayap.mesh</file>
+        <file>assets/3Dmodel/meshes/skat.mesh</file>
+        <file>assets/3Dmodel/meshes/slap.mesh</file>
+        <file>assets/3Dmodel/meshes/slebor.mesh</file>
+        <file>assets/3Dmodel/meshes/tangga.mesh</file>
+        <file>assets/3Dmodel/meshes/tapasap.mesh</file>
+        <file>assets/3Dmodel/meshes/wc.mesh</file>
+        <file>assets/3Dmodel/meshes/wipper.mesh</file>
+        <file>assets/background/DateBackground.jpg</file>
+        <file>assets/background/BatteryBackground.jpg</file>
+        <file>assets/background/camera1_bg.PNG</file>
+        <file>assets/background/camera2_bg.PNG</file>
+        <file>assets/camera/bus.png</file>
+        <file>assets/battery/BatteryIcon_parking.svg</file>
+        <file>assets/battery/BatteryIcon_sport.svg</file>
     </qresource>
 </RCC>

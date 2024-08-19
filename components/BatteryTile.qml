@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15
+import QtGraphicalEffects 1.15
 
 Rectangle {
     property int vehicalMode: 0
@@ -9,6 +10,30 @@ Rectangle {
     Layout.preferredWidth: 450
     Layout.preferredHeight: 350
     radius: 15
+    Image {
+        id: backgroundImage
+        anchors.fill: parent
+        source: "qrc:/assets/background/BatteryBackground.jpg"
+        fillMode: Image.PreserveAspectCrop
+        opacity: 0.7
+        property bool rounded: true
+
+        layer.enabled: rounded
+        layer.effect: OpacityMask {
+            maskSource: Item {
+                width: backgroundImage.width
+                height: backgroundImage.height
+
+                Rectangle {
+                    anchors.centerIn: parent
+                    width: backgroundImage.width
+                    height: backgroundImage.height
+                    radius: 20
+                }
+            }
+        }
+    }
+
     RowLayout {
         anchors.centerIn: parent
         spacing: 50
@@ -33,27 +58,27 @@ Rectangle {
                     case 0:
                         return "qrc:/assets/battery/BatteryIcon.svg";
                     case 1:
-                        return "qrc:/assets/battery/BatteryIcon_sports.svg";
+                        return "qrc:/assets/battery/BatteryIcon_sport.svg";
                     case 2:
                         return "qrc:/assets/battery/BatteryIcon_normal.svg";
                     case 3:
-                        return "qrc:/assets/battery/BatteryIcon_normal.svg";
+                        return "qrc:/assets/battery/BatteryIcon_parking.svg";
                     default:
                         return "qrc:/assets/battery/BatteryIcon.svg";
                     }
                 }
                 Image {
-                    visible: vehicalMode === 0 || vehicalMode === 1
+                    visible: vehicalMode === 0 || vehicalMode === 1 || vehicalMode === 2 || vehicalMode === 3
                     source: {
                         switch(vehicalMode){
                         case 0:
                             return "qrc:/assets/battery/Eco Leaf Icon.svg";
                         case 1:
-                            return "qrc:/assets/battery/Sport Flag Icon_battery.svg";
+                            return "qrc:/assets/battery/Eco Leaf Icon.svg";
                         case 2:
-                            return "";
+                            return "qrc:/assets/battery/Eco Leaf Icon 2.svg";
                         case 3:
-                            return "";
+                            return "qrc:/assets/battery/Eco Leaf Icon.svg";
                         default:
                             return "qrc:/assets/battery/Eco Leaf Icon.svg";
                         }
@@ -71,15 +96,15 @@ Rectangle {
                 color: {
                     switch(vehicalMode){
                     case 0:
-                        return "#4EB93D";
+                        return "#A1CD3C";
                     case 1:
-                        return "#00A3FF";
+                        return "#2BC3EA";
                     case 2:
-                        return "#FFFFFF";
+                        return "#EDF4F5";
                     case 3:
-                        return "#BDD248";
+                        return "#F79027";
                     default:
-                        return "#4EB93D";
+                        return "#EDF4F5";
                     }
                 }
             }
@@ -106,15 +131,15 @@ Rectangle {
                 color: {
                     switch(vehicalMode){
                     case 0:
-                        return "#4EB93D";
+                        return "#A1CD3C";
                     case 1:
-                        return "#00A3FF";
+                        return "#2BC3EA";
                     case 2:
-                        return "#FFFFFF";
+                        return "#EDF4F5";
                     case 3:
-                        return "#BDD248";
+                        return "#F79027";
                     default:
-                        return "#4EB93D";
+                        return "#EDF4F5";
                     }
                 }
             }
@@ -154,15 +179,15 @@ Rectangle {
                     color: {
                         switch(vehicalMode){
                         case 0:
-                            return "#FFFFFF";
+                            return "#A1CD3C";
                         case 1:
-                            return "#FFFFFF";
+                            return "#2BC3EA";
                         case 2:
-                            return "#4EB93D";
+                            return "#EDF4F5";
                         case 3:
-                            return "#4EB93D";
+                            return "#F79027";
                         default:
-                            return "#FFFFFF";
+                            return "#EDF4F5";
                         }
                     }
                 }
@@ -195,13 +220,13 @@ Rectangle {
                     text: {
                         switch(vehicalMode){
                         case 0:
-                            return qsTr("Normal Mode:");
-                        case 1:
                             return qsTr("Sport Mode:");
-                        case 2:
+                        case 1:
                             return qsTr("Echo Mode:");
-                        case 3:
+                        case 2:
                             return qsTr("Parking Mode:");
+                        case 3:
+                            return qsTr("Normal Mode:");
                         default:
                             return qsTr("Normal Mode:");
                         }
@@ -212,13 +237,15 @@ Rectangle {
                     color: {
                         switch(vehicalMode){
                         case 0:
-                            return "#FFFFFF";
+                            return "#2BC3EA";
                         case 1:
-                            return "#4EB93D";
+                            return "#A1CD3C";
                         case 2:
-                            return "#FFFFFF";
+                            return "#F79027";
+                        case 3:
+                            return "#A1CD3C";
                         default:
-                            return "#4EB93D";
+                            return "#EDF4F5";
                         }
                     }
                 }

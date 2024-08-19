@@ -16,11 +16,11 @@ Item {
     Layout.preferredWidth: 1000
     Layout.preferredHeight: 500
 
-    property real rotationX: 0
-    property real rotationY: -45
+    property real rotationX: -90
+    property real rotationY: -90
     property real lastX: 0
     property real lastY: 0
-    property real scaleFactor: 2.5
+    property real scaleFactor: 200
 
     // New properties for light rotation
     property real lightRotationX: -100
@@ -80,16 +80,16 @@ Item {
             specularAmount: 0.8 // Ajuste la brillance du matériau
         }
         // Animation for rotating the bus
-        NumberAnimation {
-            id: rotationAnimation
-            target: bus
-            property: "eulerRotation.y"
-            from: 0
-            to: 360
-            duration: 5000
-            loops: Animation.Infinite // Infinite rotation
-            running: true
-        }
+        // NumberAnimation {
+        //     id: rotationAnimation
+        //     target: bus
+        //     property: "eulerRotation.y"
+        //     from: 0
+        //     to: 360
+        //     duration: 5000
+        //     loops: Animation.Infinite // Infinite rotation
+        //     running: true
+        // }
         // NumberAnimation {
         //     id: lightPositionAnimation
         //     target: pointLight
@@ -101,7 +101,7 @@ Item {
         //     running: true
         // }
 
-        WhiteBus {
+        Ecoline {
             id: bus
             scale: Qt.vector3d(scaleFactor, scaleFactor, scaleFactor)
             eulerRotation: Qt.vector3d(rotationX, rotationY, 0)

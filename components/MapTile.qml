@@ -19,8 +19,9 @@ Item {
     }
     //GeneralMagic
     property var destinationCoordinates: null
-    property var startCoordinates: ServicesManager.createCoordinates(36.899108, 10.187172)  // Paris coordinates
+    property var startCoordinates: ServicesManager.createCoordinates(36.8981374829, 10.1882752467)  // Actia coordinates
     property var updater: ServicesManager.contentUpdater(ContentItem.Type.RoadMap)
+    property real initialZoomLevel: 10.0
     Component.onCompleted:
     {
         ServicesManager.settings.allowInternetConnection = true
@@ -39,6 +40,11 @@ Item {
         viewPerspective: MapView.ViewPerspective.View3D
         buildingsVisibility: MapView.BuildingsVisibility.Show3D
         detailsQualityLevel: MapView.DetailsQualityLevel.Medium
+        // Centrer la carte sur les coordonnées initiales lorsque la carte est chargée
+        Component.onCompleted: {
+            geomapview.centerOnCoordinates(startCoordinates, -1);
+            geomapview.zoomLevel = initialZoomLevel;
+         }
         onRouteSelected:
         {
             routeCollection.mainRoute = route
@@ -194,7 +200,7 @@ Item {
             anchors.right: parent.right
             anchors.rightMargin: 20
             implicitHeight: 140
-            implicitWidth: 500
+            implicitWidth: 600
             radius: 20
             color: "#363640"
 

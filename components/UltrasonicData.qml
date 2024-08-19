@@ -26,6 +26,7 @@ Rectangle {
             height: 60
             Text {
                 text: "Ultrasonic Sensor Data"
+                font.family: 'lato'
                 color: "white"
                 font.bold: true
                 font.pointSize: 16
@@ -73,6 +74,7 @@ Rectangle {
                             anchors.centerIn: parent
                             text: frontRight.toFixed(1) + " m"
                             color: "white"
+                            font.family: 'lato'
                             font.pointSize: 14
                         }
                     }
@@ -93,6 +95,7 @@ Rectangle {
                         font.bold: true
                         font.pointSize: 14
                         color: "white"
+                        font.family: 'lato'
                         anchors.horizontalCenter: parent.horizontalCenter
                     }
 
@@ -114,6 +117,7 @@ Rectangle {
                             anchors.centerIn: parent
                             text: frontLeft.toFixed(1) + " m"
                             color: "white"
+                            font.family: 'lato'
                             font.pointSize: 14
                         }
                     }
@@ -134,6 +138,7 @@ Rectangle {
                         font.bold: true
                         font.pointSize: 14
                         color: "white"
+                        font.family: 'lato'
                         anchors.horizontalCenter: parent.horizontalCenter
                     }
 
@@ -155,6 +160,7 @@ Rectangle {
                             anchors.centerIn: parent
                             text: sideRight.toFixed(1) + " m"
                             color: "white"
+                            font.family: 'lato'
                             font.pointSize: 14
                         }
                     }
@@ -175,6 +181,7 @@ Rectangle {
                         font.bold: true
                         font.pointSize: 14
                         color: "white"
+                        font.family: 'lato'
                         anchors.horizontalCenter: parent.horizontalCenter
                     }
 
@@ -197,6 +204,7 @@ Rectangle {
                             text: sideLeft.toFixed(1) + " m"
                             color: "white"
                             font.pointSize: 14
+                            font.family: 'lato'
                         }
                     }
                 }
@@ -216,6 +224,7 @@ Rectangle {
                         font.bold: true
                         font.pointSize: 14
                         color: "white"
+                        font.family: 'lato'
                         anchors.horizontalCenter: parent.horizontalCenter
                     }
 
@@ -238,6 +247,7 @@ Rectangle {
                             text: rearRight.toFixed(1) + " m"
                             color: "white"
                             font.pointSize: 14
+                            font.family: 'lato'
                         }
                     }
                 }
@@ -257,6 +267,7 @@ Rectangle {
                         font.bold: true
                         font.pointSize: 14
                         color: "white"
+                        font.family: 'lato'
                         anchors.horizontalCenter: parent.horizontalCenter
                     }
 
@@ -279,6 +290,7 @@ Rectangle {
                             text: rearLeft.toFixed(1) + " m"
                             color: "white"
                             font.pointSize: 14
+                            font.family: 'lato'
                         }
                     }
                 }
