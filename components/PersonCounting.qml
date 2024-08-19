@@ -32,22 +32,23 @@ Item {
                 font.pixelSize: 30
                 font.family: 'lato'
                 font.italic: true
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.top: parent.top
+                // anchors.horizontalCenter: parent.horizontalCenter
+                // anchors.top: parent.top
+                Layout.alignment: Qt.AlignHCenter
                 color: 'white'
             }
             Rectangle {
                 id :root
                 color: "#151515"
-                width: 700
-                height: 500
+                width: 800
+                height: 600
                 radius: 15
 
                 Button {
                     text: "Start people counting"
                     anchors.centerIn: parent
                     onClicked: {
-                        //pyqtLauncher.launchPyQtAppPersonDetection()
+                        pyqtLauncher.launchPyQtAppPersonDetection()
                     }
                 }
             }
@@ -60,8 +61,8 @@ Item {
                 Rectangle {
                     id: root1
                     color: "#151515"
-                    width: 200
-                    height: 200
+                    width: 250
+                    height: 250
                     radius: 15
 
                     RowLayout {
@@ -111,8 +112,8 @@ Item {
                 Rectangle {
                     id: root2
                     color: "#151515"
-                    width: 200
-                    height: 200
+                    width: 250
+                    height: 250
                     radius: 15
 
                     RowLayout {
@@ -162,8 +163,8 @@ Item {
                 Rectangle {
                     id: root3
                     color: "#151515"
-                    width: 200
-                    height: 200
+                    width: 250
+                    height: 250
                     radius: 15
 
                     RowLayout {

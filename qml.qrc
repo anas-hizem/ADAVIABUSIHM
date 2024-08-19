@@ -275,5 +275,6 @@
         <file>assets/camera/bus.png</file>
         <file>assets/battery/BatteryIcon_parking.svg</file>
         <file>assets/battery/BatteryIcon_sport.svg</file>
+        <file>screens/SettingsScreen.qml</file>
     </qresource>
 </RCC>

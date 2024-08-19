@@ -15,6 +15,7 @@
 		"/home/anas/ADAVIABUS-IHM/screens/RosScreen.qml",
 		"/home/anas/ADAVIABUS-IHM/screens/UltrasonicSensor.qml",
 		"/home/anas/ADAVIABUS-IHM/screens/HomeScreen.qml",
+		"/home/anas/ADAVIABUS-IHM/screens/SettingsScreen.qml",
 		"/home/anas/ADAVIABUS-IHM/screens/NavigationScreen.qml",
 		"/home/anas/ADAVIABUS-IHM/screens/DetectionScreen.qml",
 		"/home/anas/ADAVIABUS-IHM/screens/CameraStreaming.qml",

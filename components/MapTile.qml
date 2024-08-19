@@ -123,7 +123,7 @@ Item {
                                 console.log("Destination coordinates:", destinationCoordinates);
                                 geomapview.centerOnCoordinates(searchService.get(index).coordinates, -1);
                                 searchBar.focus = false;
-                                keyboard.hideKeyboard();}
+                            }
                         }
                     }
                 }

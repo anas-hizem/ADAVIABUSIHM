@@ -9,9 +9,9 @@ Item {
     GridLayout {
         id: grid
         anchors.fill: parent
-        anchors.rightMargin: 50
-        anchors.bottomMargin: 20
-        anchors.topMargin: 30
+        // anchors.rightMargin: 50
+        // anchors.bottomMargin: 20
+        // anchors.topMargin: 50
         rows: 1
         columns: 2
         rowSpacing: 20

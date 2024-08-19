@@ -32,8 +32,9 @@ Item {
                 font.pixelSize: 30
                 font.family: 'lato'
                 font.italic: true
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.top: parent.top
+                // anchors.horizontalCenter: parent.horizontalCenter
+                // anchors.top: parent.top
+                Layout.alignment: Qt.AlignHCenter
                 color: 'white'
             }
             Rectangle {

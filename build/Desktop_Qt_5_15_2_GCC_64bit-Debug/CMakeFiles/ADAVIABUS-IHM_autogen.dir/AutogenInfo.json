@@ -158,6 +158,12 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/anas/ADAVIABUS-IHM/PyqtLauncher.h",
+			"MU",
+			"EWIEGA46WW/moc_PyqtLauncher.cpp",
+			null
+		],
+		[
 			"/home/anas/ADAVIABUS-IHM/UltrasonSensor.h",
 			"MU",
 			"EWIEGA46WW/moc_UltrasonSensor.cpp",
@@ -280,6 +286,7 @@
 	"SETTINGS_FILE" : "/home/anas/ADAVIABUS-IHM/build/Desktop_Qt_5_15_2_GCC_64bit-Debug/CMakeFiles/ADAVIABUS-IHM_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "/home/anas/ADAVIABUS-IHM/PyqtLauncher.cpp", "MU", null ],
 		[ "/home/anas/ADAVIABUS-IHM/UltrasonSensor.cpp", "MU", null ],
 		[ "/home/anas/ADAVIABUS-IHM/appmodel.cpp", "MU", null ],
 		[ "/home/anas/ADAVIABUS-IHM/main.cpp", "MU", null ],

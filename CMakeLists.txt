@@ -51,6 +51,7 @@ else()
           radialbar.h radialbar.cpp
           qmlinterface.h qmlinterface.cpp
           mytcpsocket.h mytcpsocket.cpp
+          PyqtLauncher.h PyqtLauncher.cpp
         )
     endif()
 endif()

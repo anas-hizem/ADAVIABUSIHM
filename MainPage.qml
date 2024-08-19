@@ -16,19 +16,19 @@ Item {
     property color indicatorColor: "#FFFFFF" // Définir la couleur initiale
     property bool isFirstState: true // Suivre l'état actuel
 
-    function createSettingsDialog() {
-        var component = Qt.createComponent("qrc:/components/SettingsDialog.qml");
-        if (component.status === Component.Ready) {
-            var win = component.createObject(root);
-            if (win !== null) {
-                win.show();
-            } else {
-                console.error("Error: Could not create the SettingsDialog object");
-            }
-        } else if (component.status === Component.Error) {
-            console.error("Error loading component: " + component.errorString());
-        }
-    }
+    // function createSettingsDialog() {
+    //     var component = Qt.createComponent("qrc:/components/SettingsDialog.qml");
+    //     if (component.status === Component.Ready) {
+    //         var win = component.createObject(root);
+    //         if (win !== null) {
+    //             win.show();
+    //         } else {
+    //             console.error("Error: Could not create the SettingsDialog object");
+    //         }
+    //     } else if (component.status === Component.Error) {
+    //         console.error("Error loading component: " + component.errorString());
+    //     }
+    // }
 
 
     Item {
@@ -178,7 +178,8 @@ Item {
                     HomeButton {
                         setIcon: "qrc:/assets/icons/homeScreen/gear.png"
                         Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-                        onClicked: createSettingsDialog()
+                        //onClicked: createSettingsDialog()
+                        onClicked: sideLoader.sourceComponent = settingsScreen
                     }
 
                     HomeButton {
@@ -240,6 +241,10 @@ Item {
     Component {
         id: rosScreen
         RosScreen {}
+    }
+    Component {
+        id: settingsScreen
+        SettingsScreen {}
     }
 }
 

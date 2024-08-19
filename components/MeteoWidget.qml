@@ -31,7 +31,7 @@ Rectangle {
 
     Connections {
         target: model
-        onReadyChanged: {
+        function onReadyChanged() {
             if (model.ready)
                 weatherArea.state = "ready"
             else

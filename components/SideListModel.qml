@@ -48,9 +48,9 @@ ListModel {
         name: "Service"
     }
 
-    ListElement {
-        iconName: "qrc:/assets/Settings/gear.svg"
-        iconColor:"transparent"
-        name: "Map Settings"
-    }
+    // ListElement {
+    //     iconName: "qrc:/assets/Settings/gear.svg"
+    //     iconColor:"transparent"
+    //     name: "Map Settings"
+    // }
 }

@@ -10,7 +10,7 @@
 #include "qmlinterface.h"
 #include "radialbar.h"
 #include "mytcpsocket.h"
-
+#include "PyqtLauncher.h"
 
 int main(int argc, char *argv[])
 {
@@ -28,6 +28,11 @@ int main(int argc, char *argv[])
     MyTcpSocket server;
     server.startServer();
     engine.rootContext()->setContextProperty("tcpSocket", &server);
+
+
+    //PythonQtModel
+    PyQtLauncher pyqtLauncher;
+    engine.rootContext()->setContextProperty("pyqtLauncher", &pyqtLauncher);
 
     Settings settings;
     engine.rootContext()->setContextProperty("cSettings",&settings);

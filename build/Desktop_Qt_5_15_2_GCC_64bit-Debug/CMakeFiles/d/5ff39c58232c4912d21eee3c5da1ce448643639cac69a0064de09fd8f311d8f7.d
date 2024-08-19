@@ -1,5 +1,7 @@
 ADAVIABUS-IHM_autogen/timestamp: \
   /home/anas/ADAVIABUS-IHM/CMakeLists.txt \
+  /home/anas/ADAVIABUS-IHM/PyqtLauncher.cpp \
+  /home/anas/ADAVIABUS-IHM/PyqtLauncher.h \
   /home/anas/ADAVIABUS-IHM/UltrasonSensor.cpp \
   /home/anas/ADAVIABUS-IHM/UltrasonSensor.h \
   /home/anas/ADAVIABUS-IHM/appmodel.cpp \

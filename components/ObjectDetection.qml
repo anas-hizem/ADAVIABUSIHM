@@ -31,16 +31,17 @@ Item {
                 font.pixelSize: 30
                 font.family: 'lato'
                 font.italic: true
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.top: parent.top
+                // anchors.horizontalCenter: parent.horizontalCenter
+                // anchors.top: parent.top
+                Layout.alignment: Qt.AlignHCenter
                 color: 'white'
             }
 
             Rectangle {
                 id :root
                 color: "#151515"
-                width: 700
-                height: 500
+                width: 800
+                height: 600
                 radius: 15
 
                 Button {
@@ -48,7 +49,7 @@ Item {
                     anchors.centerIn: parent
                     onClicked: {
                         // Appeler une méthode C++ pour lancer l'application PyQt5
-                        //pyqtLauncher.launchPyQtAppPanelDetection()
+                        pyqtLauncher.launchPyQtAppPanelDetection()
                     }
                 }
             }
@@ -63,8 +64,8 @@ Item {
                 Rectangle {
                     id:root1
                     color: "#151515"
-                    Layout.preferredWidth: 200
-                    Layout.preferredHeight: 200
+                    Layout.preferredWidth: 250
+                    Layout.preferredHeight: 250
                     radius: 15
 
                     // Image to display corresponding object
@@ -98,8 +99,8 @@ Item {
                 Rectangle {
                     id:root2
                     color: "#151515"
-                    Layout.preferredWidth: 200
-                    Layout.preferredHeight: 200
+                    Layout.preferredWidth: 250
+                    Layout.preferredHeight: 250
                     radius: 15
 
                     // Image to display corresponding object
@@ -138,8 +139,8 @@ Item {
                 Rectangle {
                     id: root3
                     color: "#151515"
-                    Layout.preferredWidth: 200
-                    Layout.preferredHeight: 200
+                    Layout.preferredWidth: 250
+                    Layout.preferredHeight: 250
                     radius: 15
 
                     // Image to display corresponding object

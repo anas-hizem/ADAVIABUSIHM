@@ -199,11 +199,12 @@ Item {
                 font.italic: true
                 // anchors.horizontalCenter: parent.horizontalCenter
                 // anchors.top: parent.top
+                Layout.alignment: Qt.AlignHCenter
                 color: 'white'
             }
             Item {
                 id: navetteContainer
-                Layout.preferredWidth: 500
+                Layout.preferredWidth: 600
                 Layout.preferredHeight: 600
 
 
@@ -223,7 +224,7 @@ Item {
                     anchors.top: navetteImage.top
                     anchors.topMargin: 250
                     anchors.left: navetteContainer.left
-                    anchors.leftMargin: 10
+                    anchors.leftMargin: 100
                 }
 
                 Item {
@@ -231,7 +232,7 @@ Item {
                     width: 1
                     height: 1
                     anchors.top: navetteImage.top
-                    anchors.topMargin: 70
+                    anchors.topMargin: 120
                     anchors.right: navetteContainer.right
                     anchors.rightMargin: 80
                 }
@@ -243,7 +244,7 @@ Item {
                     anchors.bottom: navetteImage.bottom
                     anchors.bottomMargin: 240
                     anchors.right: navetteContainer.right
-                    anchors.rightMargin: 160
+                    anchors.rightMargin: 250
                 }
 
                 Item {
@@ -251,9 +252,9 @@ Item {
                     width: 1
                     height: 1
                     anchors.bottom: navetteImage.bottom
-                    anchors.bottomMargin: 250
+                    anchors.bottomMargin: 260
                     anchors.left: navetteContainer.left
-                    anchors.leftMargin: 30
+                    anchors.leftMargin: 200
                 }
 
                 MouseArea {
@@ -278,6 +279,7 @@ Item {
                         font.pixelSize: 25
                         font.bold: true
                         color: 'white'
+                        font.family: "lato"
                     }
                 }
 
@@ -303,6 +305,7 @@ Item {
                         font.pixelSize: 25
                         font.bold: true
                         color: 'white'
+                        font.family: "lato"
 
                     }
                 }
@@ -329,7 +332,7 @@ Item {
                         font.pixelSize: 25
                         font.bold: true
                         color: 'white'
-
+                        font.family: "lato"
                     }
                 }
 
@@ -355,7 +358,7 @@ Item {
                         font.pixelSize: 25
                         font.bold: true
                         color: 'white'
-
+                        font.family: "lato"
                     }
                 }
                 Canvas {

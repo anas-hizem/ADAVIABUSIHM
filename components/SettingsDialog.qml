@@ -7,21 +7,20 @@ import GeneralMagic 2.0
 import Theme 1.0
 import "../components"
 import "../components/SettingsPages"
-ApplicationWindow {
+
+
+
+Item {
     id:root
-    width: 1300
-    height: 750
-    minimumHeight: 750
-    maximumHeight: 750
-    minimumWidth: 1300
-    maximumWidth: 1300
-    flags: Qt.Dialog
+    width: 1100
+    height: 800
+    //flags: Qt.Dialog
     //signal applyTheme(var mapInfo)
 
-    Shortcut {
-        sequence: "Ctrl+Q"
-        onActivated: Qt.quit()
-    }
+    // Shortcut {
+    //     sequence: "Ctrl+Q"
+    //     onActivated: Qt.quit()
+    // }
 
     // Connections{
     //     target: mainStack.currentItem
@@ -138,9 +137,9 @@ ApplicationWindow {
         Rectangle {
             id: mainRect
             color: Theme.isDarkMode ? "#161616" : "#FFFFFF"
-            SplitView.preferredWidth: 400
-            SplitView.maximumWidth: 400
-            SplitView.minimumWidth: 400
+            SplitView.preferredWidth: 300
+            SplitView.maximumWidth: 300
+            SplitView.minimumWidth: 300
 
             ListView{
                 id:listItemView
@@ -177,6 +176,7 @@ ApplicationWindow {
             SplitView.fillWidth: true
             color: Theme.isDarkMode ? "#0E0E0E" : "#F0F0F0"
             clip: true
+
             Loader{
                 id:mainLoader
                 anchors.fill: parent
