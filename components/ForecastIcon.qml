@@ -23,7 +23,7 @@ Item {
         weatherIcon: top.weatherIcon
 
         property real side: {
-            var h = 3 * top.height / 5
+            var h = 5 * top.height / 5
             if (top.width < h)
                 top.width;
             else
@@ -42,7 +42,6 @@ Item {
         width: top.width
         text: top.bottomText
         color:'white'
-
         anchors.bottom: parent.bottom
         anchors.bottomMargin: top.height / 5 - tempText.paintedHeight
         anchors.horizontalCenter: parent.horizontalCenter

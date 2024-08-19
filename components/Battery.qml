@@ -17,7 +17,7 @@ Item {
 
     Text {
         id: batteryText
-        text: "80%"  // Remplacer par la valeur de batterie réelle si disponible
+        text: "100%"  // Remplacer par la valeur de batterie réelle si disponible
         anchors.left: battery.right
         anchors.verticalCenter: battery.verticalCenter
         font.pixelSize: 30

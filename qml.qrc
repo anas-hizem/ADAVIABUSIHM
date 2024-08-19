@@ -215,5 +215,24 @@
         <file>components/ClimaControl.qml</file>
         <file>components/Battery.qml</file>
         <file>assets/icons/homeScreen/feu-de-circulation.png</file>
+        <file>assets/actia logo/ACTIA-BACKGROUND-PC (2).jpg</file>
+        <file>assets/actia logo/ACTIA-BACKGROUND-PC.jpg</file>
+        <file>assets/actia logo/logo ACTIA ES couleurs.png</file>
+        <file>assets/actia logo/logo ACTIA ES gris.png</file>
+        <file>assets/actia logo/logo Actia gris.png</file>
+        <file>assets/actia logo/logo Actia.png</file>
+        <file>assets/actia logo/logo AES_512_512px.png</file>
+        <file>assets/actia logo/logo AES_PNG.png</file>
+        <file>components/HelpPanel.qml</file>
+        <file>components/UltrasonicData.qml</file>
+        <file>assets/icons/homeScreen/map.png</file>
+        <file>assets/icons/homeScreen/volume-mid-solid.png</file>
+        <file>assets/background/images.jpeg</file>
+        <file>assets/background/weatherBackground.jpg</file>
+        <file>assets/icons/homeScreen/doors-svgrepo-com.svg</file>
+        <file>assets/icons/homeScreen/fog-light-svgrepo-com.svg</file>
+        <file>assets/icons/homeScreen/fuel-filling-svgrepo-com.svg</file>
+        <file>assets/icons/homeScreen/high-beam.png</file>
+        <file>assets/icons/homeScreen/winshield-wiper-svgrepo-com.svg</file>
     </qresource>
 </RCC>

@@ -11,7 +11,7 @@ Rectangle {
     radius: 15
     RowLayout {
         anchors.centerIn: parent
-        spacing: 35
+        spacing: 50
 
         ColumnLayout {
             Layout.alignment: Qt.AlignHCenter
@@ -20,7 +20,7 @@ Rectangle {
             Text {
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 text: qsTr("Battery")
-                font.pixelSize: 23
+                font.pixelSize: 25
                 font.weight: Font.Bold
                 font.family: "Lato"
                 color: "#FFFFFF"
@@ -36,7 +36,8 @@ Rectangle {
                         return "qrc:/assets/battery/BatteryIcon_sports.svg";
                     case 2:
                         return "qrc:/assets/battery/BatteryIcon_normal.svg";
-
+                    case 3:
+                        return "qrc:/assets/battery/BatteryIcon_normal.svg";
                     default:
                         return "qrc:/assets/battery/BatteryIcon.svg";
                     }
@@ -51,7 +52,8 @@ Rectangle {
                             return "qrc:/assets/battery/Sport Flag Icon_battery.svg";
                         case 2:
                             return "";
-
+                        case 3:
+                            return "";
                         default:
                             return "qrc:/assets/battery/Eco Leaf Icon.svg";
                         }
@@ -63,7 +65,7 @@ Rectangle {
             Text {
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 text: qsTr("72%")
-                font.pixelSize: 23
+                font.pixelSize: 25
                 font.weight: Font.Bold
                 font.family: "Lato"
                 color: {
@@ -74,7 +76,8 @@ Rectangle {
                         return "#00A3FF";
                     case 2:
                         return "#FFFFFF";
-
+                    case 3:
+                        return "#BDD248";
                     default:
                         return "#4EB93D";
                     }
@@ -97,7 +100,7 @@ Rectangle {
             Text {
                 Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
                 text: qsTr("240 miles left")
-                font.pixelSize: 17
+                font.pixelSize: 19
                 font.weight: Font.Bold
                 font.family: "Lato"
                 color: {
@@ -108,21 +111,22 @@ Rectangle {
                         return "#00A3FF";
                     case 2:
                         return "#FFFFFF";
-
+                    case 3:
+                        return "#BDD248";
                     default:
                         return "#4EB93D";
                     }
                 }
             }
 
-            Item {Layout.preferredHeight: 20}
+            Item { Layout.preferredHeight: 20 }
 
             RowLayout {
                 Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
                 Text {
                     Layout.alignment: Qt.AlignLeft
                     text: qsTr("with")
-                    font.pixelSize: 13
+                    font.pixelSize: 15
                     font.weight: Font.Light
                     font.family: "Lato"
                     color: "#FFFFFF"
@@ -130,21 +134,21 @@ Rectangle {
 
                 Text {
                     Layout.alignment: Qt.AlignLeft
-                    text:{
+                    text: {
                         switch(vehicalMode){
                         case 0:
                             return qsTr("Normal Mode:");
                         case 1:
-                            return qsTr("Normal Mode:");
+                            return qsTr("Sport Mode:");
                         case 2:
                             return qsTr("Echo Mode:");
-
+                        case 3:
+                            return qsTr("Parking Mode:");
                         default:
                             return qsTr("Normal Mode:");
                         }
                     }
-
-                    font.pixelSize: 13
+                    font.pixelSize: 15
                     font.weight: Font.Light
                     font.family: "Lato"
                     color: {
@@ -155,7 +159,8 @@ Rectangle {
                             return "#FFFFFF";
                         case 2:
                             return "#4EB93D";
-
+                        case 3:
+                            return "#4EB93D";
                         default:
                             return "#FFFFFF";
                         }
@@ -166,20 +171,20 @@ Rectangle {
             Text {
                 Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
                 text: qsTr("205 miles left")
-                font.pixelSize: 17
+                font.pixelSize: 19
                 font.weight: Font.Bold
                 font.family: "Lato"
                 color: "#FFFFFF"
             }
 
-            Item {Layout.preferredHeight: 5}
+            Item { Layout.preferredHeight: 5 }
 
             RowLayout {
                 Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
                 Text {
                     Layout.alignment: Qt.AlignLeft
                     text: qsTr("with")
-                    font.pixelSize: 13
+                    font.pixelSize: 15
                     font.weight: Font.Light
                     font.family: "Lato"
                     color: "#FFFFFF"
@@ -187,33 +192,33 @@ Rectangle {
 
                 Text {
                     Layout.alignment: Qt.AlignLeft
-                    text:{
+                    text: {
                         switch(vehicalMode){
                         case 0:
-                            return qsTr("Sport Mode:");
+                            return qsTr("Normal Mode:");
                         case 1:
-                            return qsTr("Echo Mode:");
+                            return qsTr("Sport Mode:");
                         case 2:
-                            return qsTr("Sport Mode:");
+                            return qsTr("Echo Mode:");
+                        case 3:
+                            return qsTr("Parking Mode:");
                         default:
-                            return qsTr("Sport Mode:");
+                            return qsTr("Normal Mode:");
                         }
                     }
-
-                    font.pixelSize: 13
+                    font.pixelSize: 15
                     font.weight: Font.Light
                     font.family: "Lato"
                     color: {
                         switch(vehicalMode){
                         case 0:
-                            return "#00A3FF";
+                            return "#FFFFFF";
                         case 1:
                             return "#4EB93D";
                         case 2:
-                            return "#00A3FF";
-
+                            return "#FFFFFF";
                         default:
-                            return "#00A3FF";
+                            return "#4EB93D";
                         }
                     }
                 }
@@ -221,8 +226,8 @@ Rectangle {
 
             Text {
                 Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
-                text: qsTr("168 miles left")
-                font.pixelSize: 17
+                text: qsTr("185 miles left")
+                font.pixelSize: 19
                 font.weight: Font.Bold
                 font.family: "Lato"
                 color: "#FFFFFF"

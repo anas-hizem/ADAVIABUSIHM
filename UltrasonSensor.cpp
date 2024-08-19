@@ -1,6 +1,7 @@
 #include "UltrasonSensor.h"
 #include <QtMath>
 #include <QDebug>
+#include <QVariantMap>
 
 UltrasonSensor::UltrasonSensor(QObject *parent)
     : QObject(parent), m_avantDroit(0.5), // Valeur initiale pour Avant Droit
@@ -119,3 +120,48 @@ void UltrasonSensor::setCoteGauche(double distance) {
         emit coteGaucheChanged();
     }
 }
+QString UltrasonSensor::getColorForDistance(double distance) const
+{
+    if (distance < 1.0) {
+        return "red";
+    } else if (distance >= 1.0 && distance <= 2.0) {
+        return "yellow";
+    } else {
+        return "green";
+    }
+}
+
+QVariantMap UltrasonSensor::getWaveImagesForDistance(double distance) const
+{
+    QVariantMap result;
+    if (distance < 1.0) {
+        result["waveImages"] = QStringList{
+            "qrc:/assets/ultrason/red-wave-01.png",
+            "qrc:/assets/ultrason/red-wave-02.png",
+            "qrc:/assets/ultrason/red-wave-03.png",
+            "qrc:/assets/ultrason/red-wave-04.png",
+            "qrc:/assets/ultrason/red-wave-05.png"
+        };
+        result["interval"] = 100;
+    } else if (distance < 2.0) {
+        result["waveImages"] = QStringList{
+            "qrc:/assets/ultrason/orange-wave-01.png",
+            "qrc:/assets/ultrason/orange-wave-02.png",
+            "qrc:/assets/ultrason/orange-wave-03.png",
+            "qrc:/assets/ultrason/orange-wave-04.png",
+            "qrc:/assets/ultrason/orange-wave-05.png"
+        };
+        result["interval"] = 200;
+    } else {
+        result["waveImages"] = QStringList{
+            "qrc:/assets/ultrason/green-wave-01.png",
+            "qrc:/assets/ultrason/green-wave-02.png",
+            "qrc:/assets/ultrason/green-wave-03.png",
+            "qrc:/assets/ultrason/green-wave-04.png",
+            "qrc:/assets/ultrason/green-wave-05.png"
+        };
+        result["interval"] = 300;
+    }
+    return result;
+}
+

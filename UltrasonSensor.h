@@ -5,7 +5,7 @@
 #include <QSerialPort>
 #include <QSerialPortInfo>
 #include <QColor>
-
+#include <QVariantMap>
 
 class UltrasonSensor : public QObject
 {
@@ -37,6 +37,10 @@ public:
 
     double coteGauche() const;
     void setCoteGauche(double distance);
+
+    QString getColorForDistance(double distance) const;
+
+    Q_INVOKABLE QVariantMap getWaveImagesForDistance(double distance) const;
 
 signals:
     void avantDroitChanged();

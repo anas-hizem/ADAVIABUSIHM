@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import WeatherInfo 1.0
 import QtQuick.Layouts 1.15
+import QtGraphicalEffects 1.15
 import "../components"
 
 
@@ -26,6 +27,10 @@ Rectangle {
     ]
     AppModel {
         id: model
+    }
+
+    Connections {
+        target: model
         onReadyChanged: {
             if (model.ready)
                 weatherArea.state = "ready"
@@ -45,13 +50,45 @@ Rectangle {
         }
     }
 
-    Rectangle {
+    Item {
         id: main
         anchors.fill: parent
         anchors.horizontalCenter: weatherArea.horizontalCenter
         anchors.verticalCenter: weatherArea.verticalCenter
-        radius: 20
-        color: "#151515"
+
+        // Image {
+        //     id: backgroundImage
+        //     anchors.fill: parent
+        //     source: "qrc:/assets/background/weatherBackground.jpg"
+        //     fillMode: Image.PreserveAspectCrop
+        //     opacity: 0.7
+        // }
+        Image {
+            id: img
+            anchors.fill: parent
+            source: "qrc:/assets/background/weatherBackground.jpg"
+            fillMode: Image.PreserveAspectCrop
+            opacity: 0.7
+
+            property bool rounded: true
+            property bool adapt: true
+
+            layer.enabled: rounded
+            layer.effect: OpacityMask {
+                maskSource: Item {
+                    width: img.width
+                    height: img.height
+
+                    Rectangle {
+                        anchors.centerIn: parent
+                        width: img.width
+                        height: img.height
+                        radius: 20
+                        color: "black"
+                    }
+                }
+            }
+        }
 
         Column {
             spacing: 6
@@ -61,17 +98,23 @@ Rectangle {
                 topMargin: 6; bottomMargin: 6; leftMargin: 6; rightMargin: 6
             }
 
-            Rectangle {
-                width: parent.width
+            Item {
+                width: main.width
                 height: 20
-                color: "lightgrey"
-                radius: 10
 
                 Text {
                     text: (model.hasValidCity ? model.city : "Unknown location") + (model.useGps ? " (GPS)" : "")
                     anchors.fill: parent
-                    horizontalAlignment: Text.AlignHCenter
+                    horizontalAlignment: Text.AlignLeft
                     verticalAlignment: Text.AlignVCenter
+                    anchors {
+                        leftMargin: 10
+                        topMargin: 10
+                    }
+
+                    color:'white'
+                    font.pointSize: 25
+                    font.family: "lato"
                 }
 
                 MouseArea {
@@ -103,12 +146,11 @@ Rectangle {
                 id: current
 
                 width: main.width - 12
-                height: 2 * (main.height - 25 - 12) / 3
+                height: 2 * (main.height - 24) / 3
 
                 weatherIcon: (model.hasValidWeather
                           ? model.weather.weatherIcon
                           : "01d")
-//! [3]
                 topText: (model.hasValidWeather
                           ? model.weather.temperature
                           : "??")
@@ -126,10 +168,10 @@ Rectangle {
 
             Row {
                 id: iconRow
-                spacing: 6
+                spacing: 10
 
                 width: main.width - 30
-                height: (main.height - 25 - 24) / 5
+                height: (main.height - 24) / 5
 
                 property real iconWidth: iconRow.width / 4 - 5
                 property real iconHeight: iconRow.height

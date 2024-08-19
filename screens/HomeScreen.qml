@@ -17,7 +17,7 @@ Item {
         columns: 2
         rowSpacing: 10
         columnSpacing: 10
-        Layout.alignment: Qt.AlignHCenter
+        Layout.alignment: Qt.AlignCenter
 
         ColumnLayout {
             spacing: 10
@@ -31,7 +31,12 @@ Item {
                 spacing: 20
                 Layout.alignment: Qt.AlignHCenter
 
-                BusSpeed {}
+                BusSpeed {
+                    id: busSpeed
+                    onBatteryModeChanged: {
+                        batteryTile.vehicalMode = mode;
+                    }
+                }
 
                 BusControl {}
             }
@@ -48,7 +53,9 @@ Item {
 
             DateTimeTile {}
 
-            BatteryTile {}
+            BatteryTile {
+                    id: batteryTile
+            }
 
             MeteoWidget {}
         }

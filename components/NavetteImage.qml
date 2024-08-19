@@ -90,16 +90,16 @@ Item {
             loops: Animation.Infinite // Infinite rotation
             running: true
         }
-        NumberAnimation {
-            id: lightPositionAnimation
-            target: pointLight
-            property: "position.z"
-            from: 1000
-            to: -1000
-            duration: 5000
-            loops: Animation.Infinite // Infinite movement
-            running: true
-        }
+        // NumberAnimation {
+        //     id: lightPositionAnimation
+        //     target: pointLight
+        //     property: "position.z"
+        //     from: 1000
+        //     to: -1000
+        //     duration: 5000
+        //     loops: Animation.Infinite // Infinite movement
+        //     running: true
+        // }
 
         WhiteBus {
             id: bus

@@ -32,6 +32,7 @@ ADAVIABUS-IHM_autogen/timestamp: \
 	/home/anas/Qt/5.15.2/gcc_64/include/QtCore/QString \
 	/home/anas/Qt/5.15.2/gcc_64/include/QtCore/QUrl \
 	/home/anas/Qt/5.15.2/gcc_64/include/QtCore/QVariant \
+	/home/anas/Qt/5.15.2/gcc_64/include/QtCore/QVariantMap \
 	/home/anas/Qt/5.15.2/gcc_64/include/QtCore/QVector \
 	/home/anas/Qt/5.15.2/gcc_64/include/QtCore/qalgorithms.h \
 	/home/anas/Qt/5.15.2/gcc_64/include/QtCore/qarraydata.h \

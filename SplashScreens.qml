@@ -16,7 +16,7 @@ Item {
         anchors.centerIn: parent
         Image {
             Layout.alignment: Qt.AlignHCenter
-            source: "qrc:/assets/image/logoactia.png"
+            source: "qrc:/assets/actia logo/logo ACTIA ES couleurs.png"
             width: parent.width
             opacity: title.opacity
         }

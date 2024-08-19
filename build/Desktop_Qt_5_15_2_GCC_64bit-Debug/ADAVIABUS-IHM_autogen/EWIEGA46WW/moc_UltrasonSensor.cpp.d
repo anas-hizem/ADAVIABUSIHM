@@ -1,6 +1,7 @@
 /home/anas/ADAVIABUS-IHM/build/Desktop_Qt_5_15_2_GCC_64bit-Debug/ADAVIABUS-IHM_autogen/EWIEGA46WW/moc_UltrasonSensor.cpp: /home/anas/ADAVIABUS-IHM/UltrasonSensor.h \
   /home/anas/ADAVIABUS-IHM/build/Desktop_Qt_5_15_2_GCC_64bit-Debug/ADAVIABUS-IHM_autogen/moc_predefs.h \
   /home/anas/Qt/5.15.2/gcc_64/include/QtCore/QObject \
+  /home/anas/Qt/5.15.2/gcc_64/include/QtCore/QVariantMap \
   /home/anas/Qt/5.15.2/gcc_64/include/QtCore/qalgorithms.h \
   /home/anas/Qt/5.15.2/gcc_64/include/QtCore/qarraydata.h \
   /home/anas/Qt/5.15.2/gcc_64/include/QtCore/qatomic.h \
@@ -17,11 +18,13 @@
   /home/anas/Qt/5.15.2/gcc_64/include/QtCore/qgenericatomic.h \
   /home/anas/Qt/5.15.2/gcc_64/include/QtCore/qglobal.h \
   /home/anas/Qt/5.15.2/gcc_64/include/QtCore/qglobalstatic.h \
+  /home/anas/Qt/5.15.2/gcc_64/include/QtCore/qhash.h \
   /home/anas/Qt/5.15.2/gcc_64/include/QtCore/qhashfunctions.h \
   /home/anas/Qt/5.15.2/gcc_64/include/QtCore/qiodevice.h \
   /home/anas/Qt/5.15.2/gcc_64/include/QtCore/qiterator.h \
   /home/anas/Qt/5.15.2/gcc_64/include/QtCore/qlist.h \
   /home/anas/Qt/5.15.2/gcc_64/include/QtCore/qlogging.h \
+  /home/anas/Qt/5.15.2/gcc_64/include/QtCore/qmap.h \
   /home/anas/Qt/5.15.2/gcc_64/include/QtCore/qmetatype.h \
   /home/anas/Qt/5.15.2/gcc_64/include/QtCore/qnamespace.h \
   /home/anas/Qt/5.15.2/gcc_64/include/QtCore/qnumeric.h \
@@ -44,6 +47,7 @@
   /home/anas/Qt/5.15.2/gcc_64/include/QtCore/qsystemdetection.h \
   /home/anas/Qt/5.15.2/gcc_64/include/QtCore/qtcore-config.h \
   /home/anas/Qt/5.15.2/gcc_64/include/QtCore/qtypeinfo.h \
+  /home/anas/Qt/5.15.2/gcc_64/include/QtCore/qvariant.h \
   /home/anas/Qt/5.15.2/gcc_64/include/QtCore/qvarlengtharray.h \
   /home/anas/Qt/5.15.2/gcc_64/include/QtCore/qvector.h \
   /home/anas/Qt/5.15.2/gcc_64/include/QtCore/qversiontagging.h \

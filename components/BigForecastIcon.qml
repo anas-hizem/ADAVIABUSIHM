@@ -1,4 +1,5 @@
 import QtQuick 2.0
+import "../components"
 
 Item {
     id: current
@@ -10,12 +11,12 @@ Item {
 
     Text {
         text: current.topText
-        font.pointSize: 28
+        font.pointSize: 50
         anchors {
             top: current.top
-            left: current.left
-            topMargin: 5
-            leftMargin: 5
+            right: current.right
+            topMargin: 50
+            rightMargin: 50
         }
         color:'white'
     }
@@ -23,24 +24,29 @@ Item {
     WeatherIcon {
         weatherIcon: current.weatherIcon
         useServerIcon: false
-        anchors.centerIn: parent
         anchors.verticalCenterOffset: -15
-        width: current.smallSide
-        height: current.smallSide
+        anchors {
+            top: current.top
+            left: current.left
+            topMargin: 10
+            leftMargin: 5
+        }
+        width: current.smallSide * 0.65
+        height: current.smallSide * 0.65
     }
 
     Text {
         text: current.bottomText
-        font.pointSize: 23
         wrapMode: Text.WordWrap
         width: parent.width
-        horizontalAlignment: Text.AlignRight
         anchors {
             bottom: current.bottom
-            right: current.right
-            rightMargin: 5
+            left: current.left
+            bottomMargin: 20
+            leftMargin: 10
         }
         color:'white'
-
+        font.pointSize: 25
+        font.family: "lato"
     }
 }

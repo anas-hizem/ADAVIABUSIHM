@@ -11,8 +11,8 @@ Item {
     // List of volume images corresponding to each level
     property var volumeImages: [
         "qrc:/assets/icons/homeScreen/volume-xmark-solid.svg",
-        "qrc:/assets/icons/homeScreen/volume-off-solid.svg",
         "qrc:/assets/icons/homeScreen/volume-low-solid.svg",
+        "qrc:/assets/icons/homeScreen/volume-mid-solid.png",
         "qrc:/assets/icons/homeScreen/volume-high-solid.svg"
     ]
 

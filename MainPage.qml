@@ -45,7 +45,7 @@ Item {
             Image {
                 id: actia
                 anchors.fill: parent
-                source: "qrc:/assets/image/logoactia.png"
+                source: "qrc:/assets/actia logo/logo Actia.png"
                 fillMode: Image.PreserveAspectFit
             }
         }
@@ -157,7 +157,7 @@ Item {
                         onClicked: sideLoader.sourceComponent = homeScreen
                     }
                     HomeButton {
-                        setIcon: "qrc:/assets/icons/homeScreen/naviagtion.png"
+                        setIcon: "qrc:/assets/icons/homeScreen/map.png"
                         Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                         onClicked: sideLoader.sourceComponent = navigationScreen
                     }

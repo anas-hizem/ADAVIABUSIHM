@@ -30,8 +30,7 @@ Item {
                 font.pixelSize: 30
                 font.family: 'lato'
                 font.italic: true
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.top: parent.top
+                Layout.alignment: Qt.AlignHCenter
                 color: 'white'
             }
 
@@ -48,9 +47,10 @@ Item {
 
             DateTimeTile {}
 
-            BatteryTile {}
+            UltrasonicData {}
 
-            NotificationTile {}
+            HelpPanel {}
+
 
         }
     }
