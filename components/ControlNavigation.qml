@@ -8,6 +8,8 @@ import QtQuick.Extras.Private 1.0
 import QtGraphicalEffects 1.15
 
 import "../components"
+import "../controls"
+
 
 Item {
     anchors.fill: parent
@@ -107,10 +109,15 @@ Item {
                             height: 50
                             color: "#262626"
                             radius: 10
-                            Text {
+                            Image {
+                                source: "qrc:/assets/ros/avant-gauche.png"
                                 anchors.centerIn: parent
-                                text: "Avant Gauche"
-                                color: "white"
+                                anchors.fill:parent
+                                fillMode: Image.PreserveAspectFit
+                                MouseArea {
+                                    anchors.fill: parent
+                                    cursorShape: Qt.PointingHandCursor
+                                }
                             }
                             MouseArea {
                                 anchors.fill: parent
@@ -123,11 +130,15 @@ Item {
                             width: 120
                             height: 50
                             color: "#262626"
-                            radius: 10
-                            Text {
+                            Image {
+                                source: "qrc:/assets/ros/avant.png"
                                 anchors.centerIn: parent
-                                text: "Avant"
-                                color: "white"
+                                anchors.fill:parent
+                                fillMode: Image.PreserveAspectFit
+                                MouseArea {
+                                    anchors.fill: parent
+                                    cursorShape: Qt.PointingHandCursor
+                                }
                             }
                             MouseArea {
                                 anchors.fill: parent
@@ -141,10 +152,15 @@ Item {
                             height: 50
                             color: "#262626"
                             radius: 10
-                            Text {
+                            Image {
+                                source: "qrc:/assets/ros/avant-droite.png"
                                 anchors.centerIn: parent
-                                text: "Avant Droite"
-                                color: "white"
+                                anchors.fill:parent
+                                fillMode: Image.PreserveAspectFit
+                                MouseArea {
+                                    anchors.fill: parent
+                                    cursorShape: Qt.PointingHandCursor
+                                }
                             }
                             MouseArea {
                                 anchors.fill: parent
@@ -162,10 +178,15 @@ Item {
                             height: 50
                             color: "#262626"
                             radius: 10
-                            Text {
+                            Image {
+                                source: "qrc:/assets/ros/gauche.png"
                                 anchors.centerIn: parent
-                                text: "Gauche"
-                                color: "white"
+                                anchors.fill:parent
+                                fillMode: Image.PreserveAspectFit
+                                MouseArea {
+                                    anchors.fill: parent
+                                    cursorShape: Qt.PointingHandCursor
+                                }
                             }
                             MouseArea {
                                 anchors.fill: parent
@@ -197,10 +218,15 @@ Item {
                             height: 50
                             color: "#262626"
                             radius: 10
-                            Text {
+                            Image {
+                                source: "qrc:/assets/ros/droite.png"
                                 anchors.centerIn: parent
-                                text: "Droite"
-                                color: "white"
+                                anchors.fill:parent
+                                fillMode: Image.PreserveAspectFit
+                                MouseArea {
+                                    anchors.fill: parent
+                                    cursorShape: Qt.PointingHandCursor
+                                }
                             }
                             MouseArea {
                                 anchors.fill: parent
@@ -218,10 +244,15 @@ Item {
                             height: 50
                             color: "#262626"
                             radius: 10
-                            Text {
+                            Image {
+                                source: "qrc:/assets/ros/arriere-gauche.png"
                                 anchors.centerIn: parent
-                                text: "Arrière Gauche"
-                                color: "white"
+                                anchors.fill:parent
+                                fillMode: Image.PreserveAspectFit
+                                MouseArea {
+                                    anchors.fill: parent
+                                    cursorShape: Qt.PointingHandCursor
+                                }
                             }
                             MouseArea {
                                 anchors.fill: parent
@@ -235,10 +266,15 @@ Item {
                             height: 50
                             color: "#262626"
                             radius: 10
-                            Text {
+                            Image {
+                                source: "qrc:/assets/ros/arriere.png"
                                 anchors.centerIn: parent
-                                text: "Arrière"
-                                color: "white"
+                                anchors.fill:parent
+                                fillMode: Image.PreserveAspectFit
+                                MouseArea {
+                                    anchors.fill: parent
+                                    cursorShape: Qt.PointingHandCursor
+                                }
                             }
                             MouseArea {
                                 anchors.fill: parent
@@ -252,10 +288,15 @@ Item {
                             height: 50
                             color: "#262626"
                             radius: 10
-                            Text {
+                            Image {
+                                source: "qrc:/assets/ros/arriere-droite.png"
                                 anchors.centerIn: parent
-                                text: "Arrière Droite"
-                                color: "white"
+                                anchors.fill:parent
+                                fillMode: Image.PreserveAspectFit
+                                MouseArea {
+                                    anchors.fill: parent
+                                    cursorShape: Qt.PointingHandCursor
+                                }
                             }
                             MouseArea {
                                 anchors.fill: parent

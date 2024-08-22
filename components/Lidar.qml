@@ -2,6 +2,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Shapes 1.15
 import QtQuick.Layouts 1.15
+import QtGraphicalEffects 1.15
 
 import "../components"
 
@@ -42,14 +43,26 @@ Item {
                 width: 700
                 height: 700
                 radius: 15
-                Rectangle {
-                    id :root
-                    anchors.centerIn: parent
-                    color: "#151515"
-                    width: 300
-                    height: 300
-                    radius: 15
+                Image {
+                    id: mapImage
+                    anchors.fill: parent
+                    source: "qrc:/assets/ros/gride.jpg"
 
+                    property bool rounded: true
+                    layer.enabled: rounded
+                    layer.effect: OpacityMask {
+                        maskSource: Item {
+                            width: mapImage.width
+                            height: mapImage.height
+
+                            Rectangle {
+                                anchors.centerIn: parent
+                                width: mapImage.width
+                                height: mapImage.height
+                                radius: 20
+                            }
+                        }
+                    }
                 }
             }
         }

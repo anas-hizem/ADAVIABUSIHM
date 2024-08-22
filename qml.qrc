@@ -276,5 +276,14 @@
         <file>assets/battery/BatteryIcon_parking.svg</file>
         <file>assets/battery/BatteryIcon_sport.svg</file>
         <file>screens/SettingsScreen.qml</file>
+        <file>assets/ros/arriere-droite.png</file>
+        <file>assets/ros/arriere-gauche.png</file>
+        <file>assets/ros/arriere.png</file>
+        <file>assets/ros/avant-droite.png</file>
+        <file>assets/ros/avant-gauche.png</file>
+        <file>assets/ros/avant.png</file>
+        <file>assets/ros/droite.png</file>
+        <file>assets/ros/gauche.png</file>
+        <file>assets/ros/gride.jpg</file>
     </qresource>
 </RCC>

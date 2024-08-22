@@ -41,7 +41,7 @@ Item {
                 id :root
                 color: "#151515"
                 width: 800
-                height: 600
+                height: 500
                 radius: 15
 
                 Button {
