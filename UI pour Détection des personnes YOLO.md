@@ -1,4 +1,4 @@
-# Création d'une Interface Utilisateur pour les Résultats du Modèle YOLO
+# Création d'une Interface Utilisateur pour les Résultats du Modèle YOLO “Système de Détection et de Suivi de Personnes”
 
 ## Description
 
