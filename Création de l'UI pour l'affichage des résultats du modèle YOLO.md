@@ -48,6 +48,12 @@ Ce projet vise à développer une interface utilisateur (UI) en utilisant Qt Qui
   - Le bouton "Start object detection" appelle une méthode en C++ pour lancer le processus de détection d'objets.
   - Les résultats de détection sont reçus via un signal TCP et sont utilisés pour mettre à jour les images affichées dans l'UI.
 
+
+
+![PanelDetection](https://github.com/user-attachments/assets/81fea101-27ac-4889-b439-ced3c06066d9)
+
+
+
 ## Perspectives
 
 - **Amélioration de l'UI** :
