@@ -51,6 +51,12 @@ L'objectif principal de cette amélioration est d'intégrer une fonctionnalité 
 - **Flexibilité** : La communication TCP permet d'intégrer facilement des clients ou des systèmes tiers pour utiliser les données de détection.
 - **Modularité** : Séparation claire des responsabilités entre le traitement des images, la communication réseau, et le serveur de réception.
 
+## Réalisation
+
+![stop_panel detected](https://github.com/user-attachments/assets/7826368f-2197-4208-acb6-433135b054f5)
+
+![green_sign detected](https://github.com/user-attachments/assets/7329f92d-0215-4eb7-97a7-01f24f772a6a)
+
 ## Perspectives
 
 - **Amélioration de la Fiabilité** : Ajouter des mécanismes de reconnexion et de gestion des erreurs pour rendre la communication plus robuste.
