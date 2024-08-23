@@ -1,60 +1,67 @@
-# Création de l'Interface Utilisateur pour Afficher les Résultats du Modèle YOLO
+# Création de l'UI pour l'affichage des résultats du modèle YOLO
 
 ## Description
 
-Ce projet vise à développer une interface utilisateur (UI) en utilisant Qt Quick pour afficher les résultats de détection d'objets fournis par un modèle de détection d'objets YOLO (You Only Look Once). L'interface permet de visualiser en temps réel les objets détectés à partir des images capturées par une caméra. L'UI utilise des éléments graphiques pour représenter les objets détectés, avec la possibilité de lancer la détection via un bouton.
+Ce projet vise à développer une interface utilisateur (UI) en utilisant Qt Quick pour afficher les résultats de détection d'objets fournis par un modèle YOLO. L'interface permet de visualiser les objets détectés en temps réel à partir d'une caméra et d'afficher des images correspondantes en fonction des objets détectés.
 
 ## Prérequis
 
-- **Qt 5.15 ou supérieur** : Pour développer et exécuter l'interface utilisateur.
-- **QtQuick** : Modules `QtQuick`, `QtQuick.Controls`, `QtQuick.Shapes`, `QtQuick.Layouts` pour la création de l'interface.
-- **Qt Creator** : Pour éditer et tester le code QML.
-- **Modèle YOLO** : Modèle de détection d'objets pré-entraîné pour détecter des objets spécifiques.
+- **Qt 5.15 ou supérieur** : Framework pour le développement d'interfaces utilisateur avec QML et C++.
+- **Qt Creator** : IDE pour développer avec Qt.
+- **Python** : Pour lancer l'application de détection via PyQt5.
+- **Modèle YOLO** : Un modèle pré-entraîné pour la détection d'objets.
+- **Bibliothèques nécessaires** : QtQuick, QtQuick.Controls, QtQuick.Shapes, QtQuick.Layouts.
 
 ## Objectif
 
-L'objectif principal est de créer une interface utilisateur qui :
-- Affiche des images représentant différents objets détectés par le modèle YOLO.
-- Met à jour dynamiquement les images affichées en fonction des résultats reçus du modèle.
-- Permet de lancer la détection d'objets via une interface graphique.
+- **Développer une UI interactive** qui affiche les résultats de détection d'objets en temps réel.
+- **Permettre l'interaction** avec le modèle YOLO pour lancer la détection et mettre à jour l'interface avec les objets détectés.
+- **Affichage dynamique** des images correspondant aux objets détectés en fonction des résultats fournis par le modèle YOLO.
 
 ## Composants Clés
 
-1. **GridLayout** :
-   - Contient les éléments de l'interface, organisés en grille.
+1. **Texte d'Introduction** :
+   - Affiche un message d'introduction concernant la caméra de détection d'objets.
 
-2. **ColumnLayout** :
-   - Contient un titre et un bouton pour démarrer la détection d'objets.
-   - Le bouton appelle une méthode C++ pour lancer l'application PyQt5 pour la détection.
+2. **Rectangle Principal** :
+   - Contient un bouton pour lancer la détection d'objets. Lorsqu'il est cliqué, il appelle une méthode en C++ pour lancer l'application de détection.
 
-3. **Rectangles** :
-   - Chaque rectangle représente un conteneur pour afficher une image d'objet détecté.
-   - Les rectangles sont stylisés avec une couleur de fond et des bords arrondis.
+3. **Rectangles d'Affichage des Objets** :
+   - Trois rectangles affichant des images correspondant à différents types d'objets détectés (personnes, panneaux de stop, signaux lumineux).
+   - **Images** :
+     - `personWalk.png`
+     - `stop_panel.png`
+     - `Light.png`
+   - **Images mises à jour dynamiquement** en fonction des résultats reçus via TCP.
 
-4. **Images** :
-   - Affichent des images correspondant aux objets détectés (ex : personne, panneau de stop, lumière).
-   - La source et l'opacité des images sont mises à jour en fonction des objets reçus.
-
-5. **Connections** :
-   - Établit des connexions avec le signal `objectReceived` pour mettre à jour les images affichées.
+4. **Connections** :
+   - Connexions au signal `objectReceived` pour mettre à jour les images et l'opacité en fonction des objets détectés et de leurs scores.
 
 ## Réalisation
 
-L'interface est réalisée en QML et utilise les modules QtQuick pour la mise en page et la gestion des éléments visuels :
+- **Développement de l'UI en QML** :
+  - Utilisation de `GridLayout` pour organiser les éléments de l'interface.
+  - Utilisation de `ColumnLayout` et `RowLayout` pour disposer les éléments de manière élégante et réactive.
+  - Création de boutons et rectangles avec des images pré-définies pour afficher les résultats de la détection.
 
-- **Titre** : "Bus front camera for object detection", affiché au-dessus des éléments de détection.
-- **Bouton "Start object detection"** : Lance la détection d'objets lorsqu'il est cliqué, via une méthode Python (PyQt5).
-- **Images de Détection** : Trois rectangles affichent des images correspondant aux objets détectés, avec des mises à jour en fonction des données reçues du modèle YOLO.
-
-Le code QML permet de gérer l'affichage dynamique des résultats et la mise à jour des images en fonction des objets détectés.
+- **Communication avec C++** :
+  - Le bouton "Start object detection" appelle une méthode en C++ pour lancer le processus de détection d'objets.
+  - Les résultats de détection sont reçus via un signal TCP et sont utilisés pour mettre à jour les images affichées dans l'UI.
 
 ## Perspectives
 
-- **Amélioration de l'Interface** : Ajouter des fonctionnalités telles que des filtres pour sélectionner les types d'objets à afficher.
-- **Visualisation Avancée** : Intégrer des informations supplémentaires comme les coordonnées des objets détectés ou des légendes.
-- **Optimisation de Performance** : Améliorer la gestion des ressources et la réactivité de l'interface pour une utilisation en temps réel.
-- **Support Multilingue** : Ajouter la prise en charge de plusieurs langues pour rendre l'interface accessible à un public plus large.
+- **Amélioration de l'UI** :
+  - Ajouter des fonctionnalités supplémentaires telles que des graphiques de score de confiance ou des alertes visuelles pour les objets détectés.
+  - Intégrer des animations ou des transitions pour une meilleure expérience utilisateur.
 
----
+- **Scalabilité** :
+  - Étendre l'UI pour supporter plusieurs types d'objets et sources de détection.
+  - Ajouter des options de configuration pour personnaliser les seuils de détection et les types d'objets à afficher.
 
-Pour toute question ou contribution, veuillez contacter l'équipe de développement.
+- **Intégration avec d'autres systèmes** :
+  - Connecter l'interface à des systèmes de gestion de données ou d'alerte pour une utilisation en environnement réel.
+
+## Conclusion
+
+Ce projet démontre la capacité à créer une interface utilisateur réactive et interactive pour afficher les résultats de détection d'objets en utilisant Qt Quick. L'intégration avec des modèles de détection et des mécanismes de communication TCP permet une solution robuste pour les applications de surveillance et d'analyse en temps réel.
+
