@@ -1,4 +1,4 @@
-# Création de l'UI pour l'affichage des résultats du modèle YOLO
+# Création de l'UI pour l'affichage des résultats du modèle YOLO “Système de Détection des objects”
 
 ## Description
 
