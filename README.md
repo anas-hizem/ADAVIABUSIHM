@@ -87,3 +87,8 @@ Utilisez le fichier TestModel.qml généré pour intégrer le modèle 3D.
 
 1. Exécutez votre application dans Qt Creator pour vérifier l'intégration du modèle 3D.
 2. Ajustez les propriétés du modèle et de la caméra selon vos besoins pour obtenir la meilleure vue possible.
+
+
+### 5. Documentation et Aide
+1. Documentation de Qt Quick 3D : Qt Quick 3D Documentation
+2. Balsam Asset Import Tool : Documentation Balsam
