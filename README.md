@@ -46,17 +46,7 @@ Le widget de niveau de batterie affiche les informations suivantes :
 ### Prochaines Étapes
 
 - Intégrer le widget dans l'IHM principale.
-- Tester le widget dans différents scénarios de conduite pour assurer son bon fonctionnement.
-- Ajouter des fonctionnalités supplémentaires basées sur les retours d'expérience des utilisateurs.
 
-## Contribution
 
-Si vous souhaitez contribuer au développement de ce widget ou à tout autre aspect du projet ADAVIA IHM, veuillez consulter la section [CONTRIBUTING.md](CONTRIBUTING.md) pour les instructions sur la contribution.
-
-## Licence
-
-Ce projet est sous licence [Nom de la Licence](LICENCE).
-
----
 
 Pour toute question ou suggestion, veuillez ouvrir une issue sur le [dépôt GitHub](URL du dépôt).
