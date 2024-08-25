@@ -148,9 +148,9 @@ Le modèle 3D intégré dans l'interface d'accueil offre plusieurs fonctionnalit
 3. **lightRotationX** et **lightRotationY** : Contrôlent la direction de la lumière pour simuler différentes conditions d'éclairage.
 
 
+## Réalisation
 
-
-
+![3D model](https://github.com/user-attachments/assets/54477309-977c-4263-971a-db8ec4a4cd1a)
 
 
 
