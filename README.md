@@ -50,6 +50,3 @@ Le widget de niveau de batterie affiche les informations suivantes :
 
 ![battery](https://github.com/user-attachments/assets/78294a6e-ff1f-4695-aaf1-4f53e38c3b0f)
 
-
-
-Pour toute question ou suggestion, veuillez ouvrir une issue sur le [dépôt GitHub](URL du dépôt).
