@@ -90,5 +90,4 @@ Utilisez le fichier TestModel.qml généré pour intégrer le modèle 3D.
 
 
 ### 5. Documentation et Aide
-1. Documentation de Qt Quick 3D : Qt Quick 3D Documentation
-2. Balsam Asset Import Tool : Documentation Balsam
+Balsam Asset Import Tool : [Documentation Balsam]([https://balsam.io/docs](https://doc.qt.io/qt-6/qtquick3d-tool-balsam.html))
