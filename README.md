@@ -89,5 +89,6 @@ Utilisez le fichier TestModel.qml généré pour intégrer le modèle 3D.
 2. Ajustez les propriétés du modèle et de la caméra selon vos besoins pour obtenir la meilleure vue possible.
 
 
-### 5. Documentation et Aide
-Balsam Asset Import Tool : [Documentation Balsam]([https://balsam.io/docs](https://doc.qt.io/qt-6/qtquick3d-tool-balsam.html))
+## Documentation et Aide
+
+- [Documentation Balsam Asset Import Tool](https://doc.qt.io/qt-6/qtquick3d-tool-balsam.html)
