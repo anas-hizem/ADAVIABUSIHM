@@ -118,8 +118,8 @@ Voici le code QML utilisé pour créer le widget :
 
 ## Usage
 
-1. Affichage en temps réel : Le widget met automatiquement à jour l'heure et la date en temps réel.
-2. Personnalisation : Modifiez les propriétés de couleur, taille de la police, et images pour adapter le widget à votre thème.
+1. **Affichage en temps réel** : Le widget met automatiquement à jour l'heure et la date en temps réel.
+2. **Personnalisation** : Modifiez les propriétés de couleur, taille de la police, et images pour adapter le widget à votre thème.
 
 
 
