@@ -59,6 +59,5 @@ Pour le développement et la simulation de la navette autonome, nous utilisons R
 - [Documentation ROS 2 Humble](https://docs.ros.org/en/humble/)
 - [Gazebo avec ROS 2](https://gazebosim.org/docs/gazebo_ros2)
 - [RViz2 Documentation](https://docs.ros.org/en/humble/rviz/README.html)
-- [RQT Documentation](https://docs.ros.org/en/humble/rqt.html)
 - [Simple-2D-LiDAR-Odometry](https://github.com/dawan0111/Simple-2D-LiDAR-Odometry)
 
