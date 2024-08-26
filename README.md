@@ -99,12 +99,4 @@ Ce projet démontre une intégration réussie entre Qt et ROS2 pour la visualisa
 - [Qt 5 Documentation](https://doc.qt.io/qt-5.15/)
 - [Simple-2D-LiDAR-Odometry GitHub Repository](https://github.com/dawan0111/Simple-2D-LiDAR-Odometry)
 
-## Contribuer
-
-Les contributions sont les bienvenues ! Si vous avez des suggestions d'amélioration ou des corrections, n'hésitez pas à soumettre une pull request ou à ouvrir un problème sur le dépôt GitHub du projet.
-
-## Licence
-
-Ce projet est sous la licence [MIT](LICENSE), vous êtes libre de l'utiliser, de le modifier et de le distribuer selon les termes de cette licence.
-
 
