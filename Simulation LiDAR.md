@@ -44,9 +44,8 @@ Pour le développement et la simulation de la navette autonome, nous utilisons R
 - **Intégration de la Simulation LiDAR 2D :**
   - Planification du développement d'une interface Qt/QML pour afficher les données de la simulation LiDAR.
   - Préparation de l'intégration avec les données LiDAR fournies par le projet [Simple-2D-LiDAR-Odometry](https://github.com/dawan0111/Simple-2D-LiDAR-Odometry).
- 
-![Simulation LiDAR](https://github.com/user-attachments/assets/380c4e3c-5f1f-4ff8-85f9-92a4ab9fb7d0)
 
+ 
 ### Prochaines Étapes
 
 - **Affinement de la Simulation :** Améliorer les modèles et les scénarios de test pour une meilleure représentation des conditions réelles.
