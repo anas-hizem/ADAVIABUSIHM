@@ -12,7 +12,6 @@ Pour le développement et la simulation de la navette autonome, nous utilisons R
 
 - **Gazebo** : Outil de simulation pour tester les comportements de la navette dans des environnements virtuels réalistes.
 - **RViz2** : Outil de visualisation pour observer et analyser les données des capteurs et les états du système en temps réel.
-- **RQT** : Outil pour la visualisation et l'analyse des données ROS, ainsi que pour la gestion des interfaces utilisateur.
 
 ### Intégration de Simulation LiDAR
 
@@ -31,9 +30,6 @@ Pour le développement et la simulation de la navette autonome, nous utilisons R
 3. **Configuration de RViz2 :**
    - RViz2 est inclus avec l'installation de ROS 2. Configurez les vues pour afficher les capteurs, les données de navigation et autres informations pertinentes.
 
-4. **Utilisation de RQT :**
-   - RQT peut être utilisé pour la visualisation des topics, la gestion des services, et la configuration des paramètres. Lancez RQT avec la commande `rqt` et utilisez les plugins disponibles pour surveiller l'état du système.
-
 ### Avancées Réalisées
 
 - **Simulation dans Gazebo :** 
@@ -43,10 +39,6 @@ Pour le développement et la simulation de la navette autonome, nous utilisons R
 - **Visualisation avec RViz2 :**
   - Affichage des données en temps réel des capteurs Ultrason et LIDAR.
   - Configuration des vues pour surveiller les trajets et les obstacles.
-
-- **Analyse avec RQT :**
-  - Surveillance des topics ROS et gestion des paramètres de configuration.
-  - Utilisation des outils de diagnostic pour identifier et résoudre les problèmes en temps réel.
 
 - **Intégration de la Simulation LiDAR 2D :**
   - Planification du développement d'une interface Qt/QML pour afficher les données de la simulation LiDAR.
