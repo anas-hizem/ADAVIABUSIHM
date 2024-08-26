@@ -25,10 +25,11 @@ Pour le développement et la simulation de la navette autonome, nous utilisons R
    - Suivez les instructions officielles de ROS 2 pour installer la version Humble sur votre système [ici](https://docs.ros.org/en/humble/Installation.html).
 
 2. **Configuration de Gazebo :**
-   - Assurez-vous que Gazebo est correctement installé et configuré avec ROS 2. Consultez la documentation officielle de Gazebo pour l'intégration avec ROS 2 [ici](https://gazebosim.org/docs/gazebo_ros2).
+   - Assurez-vous que Gazebo est correctement installé et configuré avec ROS 2. Consultez la documentation officielle de Gazebo pour l'intégration avec ROS 2 [ici](https://classic.gazebosim.org/tutorials?tut=ros2_installing&cat=connect_ros).
 
 3. **Configuration de RViz2 :**
-   - RViz2 est inclus avec l'installation de ROS 2. Configurez les vues pour afficher les capteurs, les données de navigation et autres informations pertinentes.
+   - RViz2 est inclus avec l'installation de ROS 2. Configurez les vues pour afficher les capteurs, les données de navigation et autres informations pertinentes.Consultez la documentation officielle de ROS 2 pour l'utilisation de rivz2 [ici](https://docs.ros.org/en/humble/Tutorials/Intermediate/RViz/RViz-User-Guide/RViz-User-Guide.html).
+
 
 ### Avancées Réalisées
 
