@@ -88,6 +88,23 @@ ros2 run my_lidar_package lidar_display
 
 ![qt simulation](https://github.com/user-attachments/assets/c28408b8-4f89-4c08-8f27-c043bcdb91fa)
 
+## Étape Suivante : Intégration dans l'Interface de la Navette
+
+L'étape suivante consiste à intégrer cette interface de visualisation LIDAR dans l'interface globale de la navette autonome. Cette intégration nécessitera :
+
+### 1. Adaptation de l'Interface
+- Modifier l'interface Qt pour qu'elle s'intègre harmonieusement avec les autres composants de l'interface de la navette.
+- Assurer une cohérence visuelle et fonctionnelle avec les autres éléments de l'interface utilisateur de la navette.
+
+### 2. Fusion des Données
+- Combiner les données LIDAR avec les autres données du véhicule, telles que les données de navigation, les images de caméra, etc.
+- Intégrer les visualisations LIDAR dans le contexte global de l'interface, en tenant compte des autres sources d'information et des besoins de l'utilisateur.
+
+### 3. Tests d'Intégration
+- Effectuer des tests pour garantir que la visualisation des données LIDAR fonctionne correctement dans l'environnement de la navette.
+- Vérifier l'interaction entre la visualisation LIDAR et les autres interfaces, et s'assurer que toutes les fonctionnalités se comportent comme prévu.
+- Réaliser des tests d'intégration pour s'assurer que l'interface de visualisation LIDAR s'intègre correctement
+
 
 ## Conclusion
 
