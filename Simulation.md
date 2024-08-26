@@ -1,4 +1,4 @@
-# Projet ADAVIA IHM - Avancement
+# Projet ADAVIA IHM - Simulation LiDAR
 
 ## Description du Projet
 
@@ -70,10 +70,3 @@ Pour le développement et la simulation de la navette autonome, nous utilisons R
 - [RQT Documentation](https://docs.ros.org/en/humble/rqt.html)
 - [Simple-2D-LiDAR-Odometry](https://github.com/dawan0111/Simple-2D-LiDAR-Odometry)
 
-## Contact
-
-Pour toute question ou commentaire concernant le projet, veuillez contacter [Votre Nom] à [Votre Email].
-
----
-
-*Ce fichier README.md fournit un aperçu de l'avancement du projet ADAVIA IHM avec les outils de simulation ROS 2 Humble et l'intégration de la simulation LiDAR. Pour des détails supplémentaires ou des mises à jour, veuillez consulter les sections spécifiques ou contacter l'équipe de développement.*
