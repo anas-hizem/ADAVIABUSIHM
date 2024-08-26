@@ -14,12 +14,11 @@ Pour le développement et la simulation de la navette autonome, nous utilisons R
 - **RViz2** : Outil de visualisation pour observer et analyser les données des capteurs et les états du système en temps réel.
 - **RQT** : Outil pour la visualisation et l'analyse des données ROS, ainsi que pour la gestion des interfaces utilisateur.
 
-### Simulation LIDAR
+### Intégration de Simulation LiDAR
 
-Nous avons trouvé une simulation de LIDAR qui sera intégrée dans notre projet. Vous pouvez consulter le dépôt GitHub [Simple-2D-LiDAR-Odometry](https://github.com/dawan0111/Simple-2D-LiDAR-Odometry) pour plus de détails sur cette simulation.
-
-- **Lien du dépôt GitHub :** [Simple-2D-LiDAR-Odometry](https://github.com/dawan0111/Simple-2D-LiDAR-Odometry)
-- **Objectif :** Utiliser cette simulation pour développer une interface Qt qui affichera les données de LIDAR en temps réel.
+- **Simulation LiDAR 2D :** Nous avons trouvé une simulation LiDAR 2D intéressante sur GitHub, disponible à [Simple-2D-LiDAR-Odometry](https://github.com/dawan0111/Simple-2D-LiDAR-Odometry). Cette simulation est conçue pour démontrer la fonctionnalité de l'odométrie LiDAR en 2D.
+  
+- **Plan d'Intégration :** Nous prévoyons d'exploiter cette simulation pour développer une interface Qt/QML qui affichera les données générées par la simulation LiDAR. Cette interface permettra de visualiser en temps réel les données LiDAR, intégrées dans notre IHM pour une meilleure gestion et analyse des informations sensorielle.
 
 ### Configuration de l'Environnement
 
@@ -27,23 +26,51 @@ Nous avons trouvé une simulation de LIDAR qui sera intégrée dans notre projet
    - Suivez les instructions officielles de ROS 2 pour installer la version Humble sur votre système [ici](https://docs.ros.org/en/humble/Installation.html).
 
 2. **Configuration de Gazebo :**
-   - Assurez-vous que Gazebo est correctement installé et configuré pour simuler l'environnement de la navette.
+   - Assurez-vous que Gazebo est correctement installé et configuré avec ROS 2. Consultez la documentation officielle de Gazebo pour l'intégration avec ROS 2 [ici](https://gazebosim.org/docs/gazebo_ros2).
 
-3. **Intégration avec RViz2 et RQT :**
-   - Configurez RViz2 pour visualiser les données des capteurs et les états de la navette.
-   - Utilisez RQT pour la gestion des interfaces utilisateur et l'analyse des données.
+3. **Configuration de RViz2 :**
+   - RViz2 est inclus avec l'installation de ROS 2. Configurez les vues pour afficher les capteurs, les données de navigation et autres informations pertinentes.
 
-4. **Exploitation de la Simulation LIDAR :**
-   - Clonez le dépôt GitHub et intégrez la simulation LIDAR dans votre environnement de développement.
-   - Développez une interface Qt pour afficher les données de la simulation LIDAR en temps réel.
+4. **Utilisation de RQT :**
+   - RQT peut être utilisé pour la visualisation des topics, la gestion des services, et la configuration des paramètres. Lancez RQT avec la commande `rqt` et utilisez les plugins disponibles pour surveiller l'état du système.
+
+### Avancées Réalisées
+
+- **Simulation dans Gazebo :** 
+  - Développement de modèles de la navette et des capteurs.
+  - Création de scénarios de test pour la navigation et les interactions avec les capteurs.
+  
+- **Visualisation avec RViz2 :**
+  - Affichage des données en temps réel des capteurs Ultrason et LIDAR.
+  - Configuration des vues pour surveiller les trajets et les obstacles.
+
+- **Analyse avec RQT :**
+  - Surveillance des topics ROS et gestion des paramètres de configuration.
+  - Utilisation des outils de diagnostic pour identifier et résoudre les problèmes en temps réel.
+
+- **Intégration de la Simulation LiDAR 2D :**
+  - Planification du développement d'une interface Qt/QML pour afficher les données de la simulation LiDAR.
+  - Préparation de l'intégration avec les données LiDAR fournies par le projet [Simple-2D-LiDAR-Odometry](https://github.com/dawan0111/Simple-2D-LiDAR-Odometry).
 
 ### Prochaines Étapes
 
-- Intégrer l'interface Qt avec les données de LIDAR fournies par la simulation.
-- Tester et valider la fonctionnalité de l'IHM avec les données simulées.
-- Poursuivre le développement des autres fonctionnalités de l'IHM, y compris les capteurs Ultrason et les accessoires de la navette.
+- **Affinement de la Simulation :** Améliorer les modèles et les scénarios de test pour une meilleure représentation des conditions réelles.
+- **Développement de l'Interface Qt :** Créer et intégrer l'interface Qt pour afficher les données LiDAR en temps réel.
+- **Intégration avec l'IHM Qt/QML :** Connecter les données simulées avec l'interface utilisateur pour des tests fonctionnels.
+- **Tests et Validation :** Effectuer des tests approfondis pour valider les fonctionnalités et les performances du système dans différents scénarios.
 
-## Conclusion
+## Ressources
 
-Le projet ADAVIA continue de progresser avec l'intégration des outils de simulation de ROS 2 Humble et l'exploitation de nouvelles ressources comme la simulation LIDAR. Nous sommes en bonne voie pour atteindre nos objectifs de développement pour la gestion de la navette autonome.
+- [Documentation ROS 2 Humble](https://docs.ros.org/en/humble/)
+- [Gazebo avec ROS 2](https://gazebosim.org/docs/gazebo_ros2)
+- [RViz2 Documentation](https://docs.ros.org/en/humble/rviz/README.html)
+- [RQT Documentation](https://docs.ros.org/en/humble/rqt.html)
+- [Simple-2D-LiDAR-Odometry](https://github.com/dawan0111/Simple-2D-LiDAR-Odometry)
 
+## Contact
+
+Pour toute question ou commentaire concernant le projet, veuillez contacter [Votre Nom] à [Votre Email].
+
+---
+
+*Ce fichier README.md fournit un aperçu de l'avancement du projet ADAVIA IHM avec les outils de simulation ROS 2 Humble et l'intégration de la simulation LiDAR. Pour des détails supplémentaires ou des mises à jour, veuillez consulter les sections spécifiques ou contacter l'équipe de développement.*
