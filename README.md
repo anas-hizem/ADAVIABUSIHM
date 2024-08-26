@@ -86,6 +86,9 @@ Pour démarrer l'interface Qt et visualiser les données LIDAR :
 ros2 run my_lidar_package lidar_display
 ```
 
+![qt simulation](https://github.com/user-attachments/assets/c28408b8-4f89-4c08-8f27-c043bcdb91fa)
+
+
 ## Conclusion
 
 Ce projet démontre une intégration réussie entre Qt et ROS2 pour la visualisation des données LIDAR. L'interface développée permet de recevoir et d'afficher les données en temps réel, offrant ainsi une vue claire et interactive des scans LIDAR et des cartes d'occupation. Les prochaines étapes consisteront à affiner l'interface, à intégrer pleinement la simulation LIDAR, et à effectuer des tests approfondis pour garantir la robustesse de l'application.
