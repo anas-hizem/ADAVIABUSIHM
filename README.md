@@ -1,8 +1,19 @@
 # Projet de Visualisation des Données LIDAR avec Qt et ROS2
 
-## 1. Introduction
+## Introduction
+Ce projet vise à développer une interface utilisateur graphique (GUI) en utilisant Qt pour visualiser en temps réel les données LIDAR obtenues à partir de ROS 2. Cette interface permet de recevoir et d'afficher les données de balayage laser (LaserScan) ainsi que les cartes d'occupation (OccupancyGrid) provenant de la simulation LIDAR sous ROS 2.
 
-Ce projet vise à développer une interface graphique en utilisant Qt pour afficher les données LIDAR provenant d'une simulation ROS2. L'objectif est de recevoir des données LIDAR, les traiter, et les visualiser en temps réel. Le projet exploite les outils ROS2 Humble (Gazebo, RViz2, rqt) pour la simulation et l'analyse des données, ainsi qu'une simulation trouvée sur GitHub pour une odométrie 2D LIDAR simple.
+## Description
+L'interface est construite en utilisant Qt5 et ROS 2 Humble. Elle offre une vue en temps réel des données LIDAR ainsi qu'une représentation cartographique. Le projet exploite la simulation disponible sur [GitHub](https://github.com/dawan0111/Simple-2D-LiDAR-Odometry) pour tester et visualiser les données LIDAR, qui sont affichées dans l'interface Qt.
+
+
+## Prérequis
+Avant de commencer, assurez-vous que les éléments suivants sont installés sur votre système :
+- ROS 2 Humble
+- Qt5 (Core, Widgets, Gui)
+- CMake
+- Un environnement de développement compatible (Ubuntu recommandé)
+
 
 ## 2. Arborescence du Projet
 
@@ -52,19 +63,45 @@ Les données reçues sont traitées et affichées en temps réel.
 
 J'ai trouvé une simulation existante sur GitHub pour une **Odométrie 2D LIDAR simple** : [Simple-2D-LiDAR-Odometry](https://github.com/dawan0111/Simple-2D-LiDAR-Odometry). Je vais exploiter cette simulation pour intégrer l'affichage des données LIDAR dans l'interface Qt. Cette simulation sera utilisée pour valider le bon fonctionnement de l'interface.
 
-## 6. État Actuel
+## Utilisation
 
-Le projet a bien progressé :
-- **Interface Qt** : L'interface de base est fonctionnelle avec la visualisation des données LIDAR et de la carte.
-- **Intégration ROS2** : Les abonnements ROS2 sont en place et les données sont affichées en temps réel.
-- **Simulation** : La simulation trouvée sur GitHub sera exploitée dans les prochaines étapes pour tester et affiner l'interface.
+### Compilation et Exécution
+1. Clonez le repository et installez les dépendances :
+    ```bash
+    cd ~/ros2_ws/src
+    git clone https://github.com/votre-utilisateur/my_lidar_package.git
+    cd ..
+    rosdep install --from-paths src --ignore-src -r -y
+    colcon build
+    ```
+2. Sourcez l'environnement et lancez la simulation :
+    ```bash
+    source install/setup.bash
+    ros2 launch my_lidar_package lidar_display.launch.py
+    ```
 
-## 7. Prochaines Étapes
+### Lancement de l'Interface
+Pour démarrer l'interface Qt et visualiser les données LIDAR :
+```bash
+ros2 run my_lidar_package lidar_display
+```
 
-- **Intégration de la simulation LIDAR** : Tester la simulation LIDAR avec l'interface Qt et ajuster l'affichage.
-- **Amélioration de l'interface** : Ajouter des fonctionnalités supplémentaires pour l'affichage, comme le contrôle de la simulation et l'affichage des informations de débogage.
-- **Tests et validation** : Valider l'intégration complète de l'interface Qt avec ROS2 et la simulation.
+## Conclusion
 
-## 8. Conclusion
+Ce projet démontre une intégration réussie entre Qt et ROS2 pour la visualisation des données LIDAR. L'interface développée permet de recevoir et d'afficher les données en temps réel, offrant ainsi une vue claire et interactive des scans LIDAR et des cartes d'occupation. Les prochaines étapes consisteront à affiner l'interface, à intégrer pleinement la simulation LIDAR, et à effectuer des tests approfondis pour garantir la robustesse de l'application.
 
-Ce projet démont
+## Références
+
+- [ROS 2 Humble](https://docs.ros.org/en/humble/index.html)
+- [Qt 5 Documentation](https://doc.qt.io/qt-5.15/)
+- [Simple-2D-LiDAR-Odometry GitHub Repository](https://github.com/dawan0111/Simple-2D-LiDAR-Odometry)
+
+## Contribuer
+
+Les contributions sont les bienvenues ! Si vous avez des suggestions d'amélioration ou des corrections, n'hésitez pas à soumettre une pull request ou à ouvrir un problème sur le dépôt GitHub du projet.
+
+## Licence
+
+Ce projet est sous la licence [MIT](LICENSE), vous êtes libre de l'utiliser, de le modifier et de le distribuer selon les termes de cette licence.
+
+
