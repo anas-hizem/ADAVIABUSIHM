@@ -82,30 +82,20 @@ Gère les paramètres de l'autopilote :
 - **Autosteer (Beta)** : Permet d'activer ou de désactiver le mode de conduite automatique.
 - **Changement de Voie Automatique** : Permet d'activer ou de désactiver le changement de voie automatique.
 
-## Fonctionnalités à Venir
 
-- **Intégration de Fonctionnalités Avancées** : Ajout de nouvelles options pour les réglages de conduite et la sécurité.
-- **Amélioration de l'Interface Utilisateur** : Optimisation pour une meilleure expérience utilisateur.
-- **Tests et Validation** : Validation des fonctionnalités dans divers scénarios de conduite.
 
-## Contribution
+## Étapes Suivantes
 
-Les contributions au projet sont les bienvenues. Pour contribuer, veuillez suivre les étapes suivantes :
-1. Forker le dépôt.
-2. Créer une branche pour votre fonctionnalité ou correction de bug.
-3. Soumettre une Pull Request avec une description détaillée des modifications apportées.
+1. **Développement les autres Pages de Paramètres** : Créer des pages supplémentaires pour gérer des fonctionnalités spécifiques.
 
-## Documentation
+2. **Amélioration des Interactions Utilisateur** : Ajouter des animations et des transitions pour rendre l'interface plus intuitive et engageante.
 
-Pour plus d'informations sur la configuration et l'utilisation des composants QML, veuillez consulter la documentation officielle de Qt et les fichiers source dans ce dépôt.
+3. **Documentation Complète** : Compléter la documentation pour couvrir toutes les fonctionnalités avancées et fournir des exemples d'utilisation détaillés.
+
 
 ## Auteurs
 
 - **[Anas HIZEM]** - Développeur principal
-
-## Licence
-
-Ce projet est sous licence [Nom de la Licence]. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
 
 ---
 
