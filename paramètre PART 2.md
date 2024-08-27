@@ -42,12 +42,6 @@ Le projet **ADAVIA IHM** vise à développer une interface complète pour la con
 - **Conduite** : Configuration des modes de direction, du freinage régénératif, et des contrôles de traction.
 - **Lumières** : Contrôles pour les lumières extérieures et intérieures avec des options pour différents modes.
 
-![display](https://github.com/user-attachments/assets/7eb95f82-bc26-45aa-970d-3858c8c96922)
-
-![light](https://github.com/user-attachments/assets/4697a678-c6bd-43ae-ac8a-ed328e847b37)
-
-![driving](https://github.com/user-attachments/assets/aa4fdb98-1e9f-423c-94ef-098ca1816c01)
-
 ## Étapes Suivantes
 
 1. **Développement de Fonctionnalités Supplémentaires**
