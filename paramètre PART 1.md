@@ -83,6 +83,10 @@ Gère les paramètres de l'autopilote :
 - **Changement de Voie Automatique** : Permet d'activer ou de désactiver le changement de voie automatique.
 
 
+![quick control](https://github.com/user-attachments/assets/ceac9aa4-06d4-4578-ac2a-98c0e8f7ffad)
+
+![autopilote](https://github.com/user-attachments/assets/49e1a739-3eb2-4677-ab58-8fe132e4f4a8)
+
 
 ## Étapes Suivantes
 
