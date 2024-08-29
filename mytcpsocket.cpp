@@ -46,7 +46,7 @@ void MyTcpSocket::readData()
         double score = obj["score"].toDouble();
         //QString object = QString("%1: %2").arg(className).arg(score);
 
-        //qDebug() << "Received object:" << className << score;
+        qDebug() << "Received object:" << className << score;
         emit objectReceived(className , score);
     }
 }
