@@ -2,7 +2,7 @@
 # ADAVIA IHM Project
 
 ## Overview
-Welcome to the ADAVIA IHM project repository. This project was developed as part of my summer internship at **ACTIA Engineering Services**, under the supervision of **Mr. KOUKI Fedi**. The goal of this project is to design a comprehensive Human-Machine Interface (HMI) for the efficient management of the autonomous shuttle, ADAVIA. This interface was developed using **Qt**, **QML**, and **C++**, with additional support from **ROS2** and **Python** for advanced functionalities.
+Welcome to the ADAVIA IHM project repository. This project was developed as part of my summer internship at **ACTIA Engineering Services**. The goal of this project is to design a comprehensive Human-Machine Interface (HMI) for the efficient management of the autonomous shuttle, ADAVIA. This interface was developed using **Qt**, **QML**, and **C++**, with additional support from **ROS2** and **Python** for advanced functionalities.
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -51,31 +51,38 @@ The solution needed to ensure optimal performance, intuitive ergonomics, high re
 1. **Dashboard ADAVIA**:
    - Displays critical information such as a 3D model of the shuttle, time, date, battery level, and speed.
    - Provides controls for various shuttle accessories.
+![Parametre ADAVIA](https://github.com/user-attachments/assets/2334d285-1d98-43e4-a2f1-b4f1555f5eea)
 
 2. **GPS Navigation**:
    - Locates the current position.
    - Allows users to search for and select destinations.
    - Displays route paths and offers route simulation functionality.
+![Navigation GPS](https://github.com/user-attachments/assets/de641a2b-5e88-404d-97c8-086e0c0d081f)
 
 3. **Camera Streaming**:
    - Real-time video streaming from the front, rear, and side cameras.
+![Uploading StreamingCamera.png…]()
 
 4. **Ultrasonic Sensor Data Display**:
    - Visualizes the distances and positions of objects detected by the sensors.
    - Provides notifications for nearby obstacles.
+![Ultrason](https://github.com/user-attachments/assets/acee0192-796d-456d-b059-544df5433a1c)
 
 5. **YOLO Model Integration**:
    - Counts passengers through the side camera.
    - Detects objects such as traffic signs and lights through the front camera.
+![modele YOLO](https://github.com/user-attachments/assets/54166381-b00b-4b0f-a1b9-6e33c2c3513c)
 
 6. **Navigation Control and LIDAR Data**:
    - Controls shuttle navigation.
    - Displays real-time LIDAR data for obstacle detection and avoidance.
+![Uploading Screenshot from 2024-09-03 14-39-36.png…]()
 
 7. **Shuttle Settings**:
    - Controls display brightness and external lights.
    - Configures cruise control distance, autosteer, and automatic lane change.
    - Provides options for display modes (Day, Night, Auto), unit selection, and traction control settings.
+![Parametre ADAVIA](https://github.com/user-attachments/assets/c0389754-6109-43d5-a56a-b1b86fcef437)
 
 ## Conclusion and Future Perspectives
 **ADAVIA IHM** provides a comprehensive solution for autonomous vehicle management, integrating advanced technologies and an intuitive interface. Future developments will focus on:
@@ -85,5 +92,4 @@ The solution needed to ensure optimal performance, intuitive ergonomics, high re
 
 ---
 
-Thank you for visiting this repository. For more details, please refer to the [Documentation](link_to_docs) and [Demo Video](link_to_demo).
-
+Thank you for visiting this repository.
