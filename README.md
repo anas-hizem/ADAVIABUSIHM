@@ -51,7 +51,7 @@ The solution needed to ensure optimal performance, intuitive ergonomics, high re
 1. **Dashboard ADAVIA**:
    - Displays critical information such as a 3D model of the shuttle, time, date, battery level, and speed.
    - Provides controls for various shuttle accessories.
-![Parametre ADAVIA](https://github.com/user-attachments/assets/2334d285-1d98-43e4-a2f1-b4f1555f5eea)
+![Dashboard ADAVIA](https://github.com/user-attachments/assets/7ef7552b-e529-42ad-8c1f-d439d82ad878)
 
 2. **GPS Navigation**:
    - Locates the current position.
